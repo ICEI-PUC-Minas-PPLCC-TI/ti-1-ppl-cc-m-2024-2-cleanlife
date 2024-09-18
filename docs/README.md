@@ -3,7 +3,7 @@
 Informações básicas do projeto.
 
 * **Projeto:** CleanLife 
-* **Repositório GitHub:** https://github.com/ICEI-PUC-Minas-PPLCC-TI/ti-1-ppl-cc-m-2024-2-cleanlife.git
+* **Repositório GitHub:** https://github.com/ICEI-PUC-Minas-PPLCC-TI/ti-1-ppl-cc-m-2024-2-cleanlife
 * **Membros da equipe:**
 
   * <a href="https://github.com/BernardoPiresMascarenhas">Bernardo Pires Mascarenhas</a>
