@@ -6,12 +6,12 @@ Informações básicas do projeto.
 * **Repositório GitHub:** https://github.com/ICEI-PUC-Minas-PPLCC-TI/ti-1-ppl-cc-m-2024-2-cleanlife.git
 * **Membros da equipe:**
 
-  * Bernardo Pires Mascarenhas(https://github.com/BernardoPiresMascarenhas)
-  * Arthur Costa Serra Negra(https://github.com/sevak19)
-  * Lucas Stanciolli(https://github.com/lucasstc)
-  * Samuel Lage(https://github.com/samuellagee)
-  * Enzo(https://github.com/cicrano)
-  * Pedro Fonseca Silva(https://github.com/cicrano)
+  * <a href="https://github.com/BernardoPiresMascarenhas">Bernardo Pires Mascarenhas</a>
+  * <a href="https://github.com/sevak19">Arthur Costa Serra Negra</a>
+  * <a href="https://github.com/lucasstc">Lucas Stanciolli</a>
+  * <a href="https://github.com/samuellagee">Samuel Lage</a>
+  * <a>Enzo</a>
+  * <a>Pedro Fonseca Silva</a>
 
 A documentação do projeto é estruturada da seguinte forma:
 
