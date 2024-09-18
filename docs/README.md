@@ -8,7 +8,7 @@ Informações básicas do projeto.
 
   * <a href="https://github.com/BernardoPiresMascarenhas">Bernardo Pires Mascarenhas</a>
   * <a href="https://github.com/sevak19">Arthur Costa Serra Negra</a>
-  * <a href="https://github.com/lucasstc">Lucas Stanciolli</a>
+  * <a href="https://github.com/lucasstc">Lucas Stancioli Siqueira</a>
   * <a href="https://github.com/samuellagee">Samuel Lage</a>
   * <a>Enzo</a>
   * <a>Pedro Fonseca Silva</a>
