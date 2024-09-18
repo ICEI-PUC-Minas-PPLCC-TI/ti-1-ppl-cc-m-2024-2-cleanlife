@@ -2,13 +2,16 @@
 
 Informações básicas do projeto.
 
-* **Projeto:** [NOME DO PROJETO]
-* **Repositório GitHub:** [LINK PARA O REPOSITÓRIO NO GITHUB]
+* **Projeto:** CleanLife 
+* **Repositório GitHub:** https://github.com/ICEI-PUC-Minas-PPLCC-TI/ti-1-ppl-cc-m-2024-2-cleanlife.git
 * **Membros da equipe:**
 
-  * [Fulano](https://github.com/fulano) ⚠️ EXEMPLO ⚠️
-  * [Beltrano](https://github.com/beltrano) ⚠️ EXEMPLO ⚠️
-  * [Cicrano](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
+  * Bernardo Pires Mascarenhas(https://github.com/BernardoPiresMascarenhas)
+  * Arthur Costa Serra Negra(https://github.com/sevak19)
+  * Lucas Stanciolli(https://github.com/lucasstc)
+  * Samuel Lage(https://github.com/samuellagee)
+  * Enzo(https://github.com/cicrano)
+  * Pedro Fonseca Silva(https://github.com/cicrano)
 
 A documentação do projeto é estruturada da seguinte forma:
 
