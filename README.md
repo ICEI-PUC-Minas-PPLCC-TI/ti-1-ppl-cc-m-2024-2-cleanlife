@@ -1,20 +1,24 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=15989635&assignment_repo_type=AssignmentRepo)
-# Nome do projeto
+# CleanLife
 
-Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
+O projeto *CleanLife* é uma plataforma de fórum voltada para oferecer suporte e ajuda a pessoas que enfrentam o vício em drogas. O objetivo é criar um ambiente seguro e acolhedor, onde os usuários possam compartilhar suas experiências, buscar orientação e formar uma comunidade de apoio mútuo. 
+
+Através do fórum, os participantes podem interagir entre si, trocar conselhos e motivação, além de encontrar recursos úteis para o processo de recuperação. O *CleanLife* visa promover a solidariedade e encorajar o fortalecimento pessoal, facilitando o enfrentamento do vício por meio da ajuda coletiva.
 
 ## Alunos integrantes da equipe
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Arthur Costa Serra Negra
+* Bernardo Pires Mascarenhas
+* Lucas Stancioli Siqueira
+* Samuel Lage Spalla Fajardo
+* Pedro Fonseca
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
-
+* Hayala Nepomuceno Curto
+* Ilo Amy Saldanha Rivero
+* Rommel Vieira Carneiro
+* Walisson Ferreira de Carvalho
 
 
 ## Instruções de utilização 
