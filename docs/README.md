@@ -8,7 +8,7 @@ Informações básicas do projeto.
 
   * <a href="https://github.com/sevak19">Arthur Costa Serra Negra</a>
   * <a href="https://github.com/BernardoPiresMascarenhas">Bernardo Pires Mascarenhas</a>
-  * <a href="">Enzo Piacenza Werneck da Rocha</a>
+  * <a href="https://github.com/Porosa">Enzo Piacenza Werneck da Rocha</a>
   * <a href="https://github.com/lucasstc">Lucas Stancioli Siqueira</a>
   * <a href="https://github.com/samuellagee">Samuel Lage Spalla Fajardo</a>
   * <a href="https://github.com/Pedrouo">Pedro Fonseca Silva</a>
