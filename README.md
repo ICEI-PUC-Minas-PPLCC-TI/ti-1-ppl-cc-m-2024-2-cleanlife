@@ -7,11 +7,12 @@ Através do fórum, os participantes podem interagir entre si, trocar conselhos 
 
 ## Alunos integrantes da equipe
 
-* Arthur Costa Serra Negra
-* Bernardo Pires Mascarenhas
-* Lucas Stancioli Siqueira
-* Samuel Lage Spalla Fajardo
-* Pedro Fonseca
+* <a href="https://github.com/sevak19">Arthur Costa Serra Negra</a>
+* <a href="https://github.com/BernardoPiresMascarenhas">Bernardo Pires Mascarenhas</a>
+* <a href="">Enzo Piacenza Werneck da Rocha</a>
+* <a href="https://github.com/lucasstc">Lucas Stancioli Siqueira</a>
+* <a href="https://github.com/samuellagee">Samuel Lage Spalla Fajardo</a>
+* <a href="https://github.com/Pedrouo">Pedro Fonseca Silva</a>
 
 ## Professores responsáveis
 
