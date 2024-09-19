@@ -32,6 +32,8 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 ## Problema
 
+O vício em drogas continua sendo um grande desafio global, afetando a vida de milhões de pessoas e suas famílias. Embora existam muitas formas de tratamento, a falta de apoio social e emocional frequentemente dificulta a recuperação. Muitos usuários enfrentam estigma social e dificuldades em buscar ajuda, o que resulta em isolamento e recaídas.
+
 **✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
@@ -46,6 +48,8 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 ## Objetivos
 
+O principal objetivo do CleanLife é fornecer um espaço digital onde pessoas em processo de recuperação possam interagir, compartilhar experiências e buscar apoio mútuo. O projeto pretende facilitar a criação de uma comunidade colaborativa que promova o fortalecimento pessoal e a superação do vício com base na troca de conhecimentos e vivências.
+
 **✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
@@ -57,6 +61,8 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 > - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
 
 ## Justificativa
+
+A necessidade de apoio emocional e social no processo de recuperação do vício é amplamente reconhecida, mas ainda há uma lacuna em plataformas que ofereçam essa rede de suporte de forma acessível, segura e anônima. O CleanLife justifica-se pela oportunidade de criar um espaço livre de julgamento, onde os usuários podem se sentir compreendidos e encorajados. Ao promover a troca de informações e experiências, a plataforma pretende reduzir a sensação de isolamento e ajudar os participantes a encontrarem o caminho para a recuperação.
 
 **✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
 
@@ -71,6 +77,8 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 > - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
 ## Público-Alvo
+
+O público-alvo do CleanLife inclui pessoas que estão enfrentando ou já enfrentaram o vício em drogas, bem como seus familiares e amigos que buscam entender melhor o processo de recuperação. Além disso, profissionais da saúde mental e especialistas em reabilitação também podem se beneficiar ao usar a plataforma como uma ferramenta adicional para suporte e acompanhamento de seus pacientes.
 
 **✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
 
