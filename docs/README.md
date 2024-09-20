@@ -28,70 +28,85 @@ A documentação do projeto é estruturada da seguinte forma:
 
 # Contexto
 
-Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa e público-alvo.
-
 ## Problema
 
-O vício em drogas continua sendo um grande desafio global, afetando a vida de milhões de pessoas e suas famílias. Embora existam muitas formas de tratamento, a falta de apoio social e emocional frequentemente dificulta a recuperação. Muitos usuários enfrentam estigma social e dificuldades em buscar ajuda, o que resulta em isolamento e recaídas.
+O vício em drogas continua sendo um grande desafio global, afetando não so a vida dos usuarios mas também seus famíliares, amigos e a sociedade em geral. Embora existam muitas formas de tratamento, a falta de apoio social e emocional frequentemente dificulta a recuperação. Muitos usuários enfrentam estigma social e dificuldades em buscar ajuda, o que resulta em isolamento e recaídas.
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+Atualmente, há uma lacuna significativa em plataformas que promovam um espaço seguro, colaborativo e acessível para que essas pessoas possam compartilhar suas histórias, obter aconselhamento e encontrar uma comunidade de apoio.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, não é a hora de comentar sobre a aplicação. Descreva também o contexto em que essa aplicação será usada, se houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
->
-> **Orientações**:
->
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+Embora existam métodos clínicos e terapêuticos disponíveis para tratar o vício, muitos dependentes não têm acesso contínuo a redes de apoio ou desistem do tratamento por falta de suporte social. O estigma associado ao vício muitas vezes impede os indivíduos de buscar ajuda, levando-os ao isolamento, o que agrava as chances de recaída. Além disso, as famílias e amigos, que desempenham um papel crucial na recuperação, muitas vezes se sentem despreparados para oferecer suporte adequado.
+
+O contexto em que essa aplicação será usada envolve o ambiente digital, onde viciados, ex-viciados, familiares e especialistas poderão interagir sem medo de julgamento, de forma anônima e segura. O uso de tecnologias voltadas para fóruns, redes sociais e troca de mensagens será essencial para facilitar a comunicação e a troca de experiências entre os participantes. A aplicação se insere em um cenário onde a conectividade e o acesso a informações são fundamentais, criando um ponto de encontro virtual para uma comunidade que, de outra forma, seria difícil de organizar e sustentar.
+
+Este ambiente digital pretende aproveitar a ubiquidade da internet e dispositivos móveis para fornecer suporte contínuo e de fácil acesso a qualquer hora e lugar, garantindo que os usuários possam recorrer à plataforma sempre que necessário.
 
 ## Objetivos
 
-O principal objetivo do CleanLife é fornecer um espaço digital onde pessoas em processo de recuperação possam interagir, compartilhar experiências e buscar apoio mútuo. O projeto pretende facilitar a criação de uma comunidade colaborativa que promova o fortalecimento pessoal e a superação do vício com base na troca de conhecimentos e vivências.
+O principal objetivo do *CleanLife* é desenvolver um software que ofereça um espaço digital acolhedor e seguro onde pessoas em processo de recuperação de vícios possam interagir, compartilhar experiências e buscar apoio mútuo. Esse software tem como meta solucionar o problema do isolamento e da falta de suporte emocional e social enfrentados por muitos dependentes, criando uma plataforma que promova a troca de conhecimentos e vivências entre os participantes.
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+**O objetivo geral** do *CleanLife* é criar uma aplicação que facilite a formação de uma comunidade colaborativa, onde os usuários possam encontrar força e apoio para superar o vício. Para isso, a plataforma será desenvolvida com foco na acessibilidade, permitindo que viciados, ex-viciados, familiares e especialistas interajam de forma anônima, troquem conselhos e ofereçam suporte uns aos outros, independentemente de suas localizações geográficas.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
->
-> **Orientações**:
->
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+### Objetivos específicos:
+
+**Promover um ambiente digital seguro e anônimo:**
+- Um dos principais focos do projeto é garantir que os usuários possam participar da plataforma sem medo de julgamento ou exposição. Isso será alcançado através do desenvolvimento de mecanismos de anonimato e moderação eficaz, criando um espaço onde os usuários se sintam à vontade para compartilhar suas experiências e buscar apoio sem constrangimento.
+
+**Mapear e identificar as melhores práticas de moderação e suporte em comunidades online:**
+- Estudar outras plataformas de fóruns e redes de apoio, identificando estratégias de sucesso em termos de moderação, apoio mútuo e engajamento dos usuários. Aplicar essas práticas no *CleanLife* para criar um ambiente virtual seguro e acolhedor.
+
+**Facilitar a integração de recursos úteis para a recuperação:**
+- Integrar na plataforma materiais educativos e recursos práticos, como links para clínicas de reabilitação, métodos de tratamento, e artigos sobre saúde mental e dependência. Através dessas funcionalidades, o *CleanLife* oferecerá mais do que apenas um fórum de discussão, tornando-se uma ferramenta abrangente para auxiliar o processo de recuperação.
+
+Esses objetivos específicos permitem ir além da simples comunicação entre usuários, criando um espaço digital que não apenas promove o fortalecimento pessoal, mas também proporciona acesso a informações vitais para a superação do vício.
 
 ## Justificativa
 
-A necessidade de apoio emocional e social no processo de recuperação do vício é amplamente reconhecida, mas ainda há uma lacuna em plataformas que ofereçam essa rede de suporte de forma acessível, segura e anônima. O CleanLife justifica-se pela oportunidade de criar um espaço livre de julgamento, onde os usuários podem se sentir compreendidos e encorajados. Ao promover a troca de informações e experiências, a plataforma pretende reduzir a sensação de isolamento e ajudar os participantes a encontrarem o caminho para a recuperação.
+A necessidade de apoio emocional e social no processo de recuperação do vício é amplamente reconhecida por profissionais da saúde mental, terapeutas e pela própria comunidade de pessoas em reabilitação. No entanto, existe uma lacuna significativa em plataformas que ofereçam esse suporte de forma acessível, segura e anônima. O projeto *CleanLife* justifica-se por preencher essa lacuna, oferecendo um espaço digital que promove a interação entre indivíduos em diferentes estágios de recuperação, ex-viciados, familiares e profissionais, criando uma rede de apoio onde os usuários podem compartilhar suas histórias, trocar conselhos e se sentirem acolhidos em um ambiente livre de julgamento.
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+### Por quê?
+Potencial de impactar diretamente a vida de pessoas em recuperação, ao atender a uma necessidade crítica de suporte contínuo e acessível. O isolamento social, o estigma e a falta de redes de apoio são barreiras significativas para aqueles que lutam contra o vício. A escolha desse tema reflete a oportunidade de usar a tecnologia para criar uma comunidade digital que encoraje o fortalecimento pessoal e a superação do vício por meio do apoio mútuo.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
->
-> O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
->
-> **Orientações**:
->
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+### O quê?
+A função do *CleanLife* é fornecer uma plataforma digital que atue como uma rede de suporte emocional e social. A plataforma visa facilitar a troca de experiências e informações, além de promover um ambiente colaborativo onde os participantes possam se sentir compreendidos e motivados a continuar sua jornada de recuperação. Através de funcionalidades como fóruns de discussão anônimos, recursos educativos e acompanhamento do progresso pessoal, o *CleanLife* ajudará os usuários a reduzirem o sentimento de isolamento.
+
+### Quem?
+O público-alvo do *CleanLife* inclui:
+
+- Pessoas em processo de recuperação de vícios: que necessitam de um espaço seguro para buscar apoio e compartilhar suas experiências.
+- Ex-viciados: que podem contribuir com suas histórias de sucesso e fornecer conselhos para aqueles que estão nos estágios iniciais de recuperação.
+- Familiares e amigos de dependentes: que também buscam orientação sobre como ajudar seus entes queridos no processo de recuperação.
+- Profissionais de saúde mental e especialistas em reabilitação: que podem fornecer aconselhamento e recursos especializados.
+
+### Base
+O trabalho do *CleanLife* está fundamentado em dados coletados por meio de pesquisas, entrevistas com o público-alvo, entrevistas com profissionais da área de saúde mental e dependência, além de estatísticas sobre a eficácia do suporte emocional no processo de recuperação. A escolha dos objetivos foi guiada por essas informações, que apontam para a importância de criar um ambiente seguro e anônimo, com recursos acessíveis e fáceis de usar, que respondam diretamente às principais dificuldades enfrentadas por quem esta no processo de recuperação.
+
+Estudos mostram que plataformas digitais têm o potencial de aumentar o engajamento e o sucesso em tratamentos de vício, mas ainda faltam espaços voltados especificamente para o apoio emocional e social. A criação de um ambiente onde a troca de experiências e a solidariedade são incentivadas se baseia também em teorias de resiliência e comunidades de prática, onde o compartilhamento de conhecimentos e vivências fortalece os indivíduos e suas capacidades de enfrentamento.
+
+Portanto, o *CleanLife* se justifica não apenas pela inovação tecnológica, mas pela oportunidade de criar um espaço que se torne um ponto de apoio crucial no processo de reabilitação, impactando positivamente a vida de seus usuários e promovendo um caminho mais acessível para a recuperação.
 
 ## Público-Alvo
 
-O público-alvo do CleanLife inclui pessoas que estão enfrentando ou já enfrentaram o vício em drogas, bem como seus familiares e amigos que buscam entender melhor o processo de recuperação. Além disso, profissionais da saúde mental e especialistas em reabilitação também podem se beneficiar ao usar a plataforma como uma ferramenta adicional para suporte e acompanhamento de seus pacientes.
+O público-alvo do *CleanLife* abrange diferentes perfis de usuários, todos conectados pela busca por apoio no processo de recuperação do vício em drogas. Esse público inclui:
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+1. Pessoas em recuperação ou em busca de tratamento: Indivíduos que estão enfrentando ou já enfrentaram o vício e desejam uma rede de suporte emocional e social. São usuários que, em sua maioria, podem não ter grande familiaridade com a tecnologia, mas buscam uma plataforma intuitiva e acessível que lhes permita interagir anonimamente, trocando experiências com outras pessoas na mesma jornada. Muitos desses indivíduos podem já ter passado por tratamentos em clínicas de reabilitação, mas ainda necessitam de acompanhamento contínuo e suporte emocional.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Descreva quais são as pessoas que usarão a sua aplicação indicando os diferentes perfis. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
->
-> Adicione informações sobre o público-alvo por meio de uma descrição textual, ou diagramas de personas, mapa de stakeholders, ou como o grupo achar mais conveniente.
->
-> **Orientações**:
->
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+2. Familiares e amigos de dependentes: Um grupo que, muitas vezes, busca entender melhor como ajudar e lidar com seus entes queridos que enfrentam o vício. Eles podem usar a plataforma para buscar orientação e participar de discussões que os ajudem a compreender melhor o processo de recuperação e oferecer apoio efetivo. Embora possam ter maior familiaridade com o uso de plataformas digitais, sua principal motivação é o acesso rápido e confiável a informações e apoio.
+
+3. Profissionais de saúde mental e reabilitação: Psiquiatras, psicólogos, terapeutas e outros especialistas na área de saúde mental e dependência química também fazem parte do público-alvo. Esses profissionais podem utilizar o *CleanLife* como uma ferramenta de extensão para monitorar o progresso de seus pacientes, interagir com a comunidade e fornecer orientações baseadas em evidências. Como esse público tem mais familiaridade com tecnologias de acompanhamento de pacientes e fóruns de discussão profissional, podem valorizar recursos avançados de monitoramento e gestão.
+
+4. ONGs e organizações de reabilitação: Instituições que trabalham diretamente com a recuperação e reinserção social de pessoas dependentes de drogas também podem usar a plataforma como um canal adicional de suporte. Essas organizações podem integrar seus serviços ao *CleanLife* para fornecer apoio e aconselhamento contínuo, alcançando os participantes de forma mais direta e eficaz.
+
+### Personas:
+- Persona 1: João, 34 anos, em recuperação há 6 meses
+João já passou por tratamento em uma clínica, mas sente que ainda precisa de apoio constante para evitar recaídas. Ele tem pouca experiência com tecnologia e busca uma plataforma simples e acessível onde possa compartilhar sua jornada de forma anônima.
+
+- Persona 2: Maria, 45 anos, mãe de um adolescente em recuperação
+Maria está desesperada para ajudar seu filho, mas não sabe por onde começar. Ela quer uma plataforma onde possa aprender mais sobre o vício e conversar com outras mães que passaram pela mesma situação.
+
+- Persona 3: Dr. Ricardo, 52 anos, psicólogo especialista em dependência química
+Dr. Ricardo usa a tecnologia no dia a dia para acompanhar seus pacientes e está sempre em busca de novas ferramentas que possam melhorar o processo de recuperação. Ele vê o CleanLife como uma extensão de seu consultório, onde pode monitorar discussões e oferecer suporte especializado.
+
+Esses perfis demonstram como a plataforma *CleanLife* atende a uma diversidade de usuários com diferentes níveis de conhecimento tecnológico e diversas relações com o problema do vício, oferecendo soluções personalizadas e focadas nas necessidades de cada grupo.
 
 # Product Discovery
 
