@@ -216,24 +216,37 @@ Artefatos relacionados com a interface e a interacão do usuário na proposta de
 
 Estes são os protótipos de telas do sistema.
 
-**✳️✳️✳️ COLOQUE AQUI OS PROTÓTIPOS DE TELAS COM TÍTULO E DESCRIÇÃO ✳️✳️✳️**
+##### Tela de Boas-Vindas / Sobre Nós
 
-##### TELA XPTO ⚠️ EXEMPLO ⚠️
+A primeira tela que o usuário vê ao acessar a plataforma. Ela apresenta o CleanLife de forma acolhedora e explica a missão da plataforma, destacando a importância da comunidade no processo de recuperação.
 
-Descrição para a tela XPTO
+![SobreNos](images/SobreNos(deslogado).png)
 
-![Exemplo de wireframe](images/exemplo-wireframe.png)
+##### Tela dos Foruns / HOME
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Wireframes são protótipos das telas da aplicação usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante ao layout de elementos fundamentais na interface.
->
-> **Orientações**:
->
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
+Após o login, o usuário é direcionado para a tela principal da plataforma, onde pode visualizar tópicos populares, acessar fóruns e criar seu proprio forum.
+
+![HOME](images/HOME(forum).png)
+
+##### Tela de Busca
+
+Tela onde o usuario pode pesquisar o forum de seu interesse.
+
+![BUSCA](images/BUSCA.png)
+![RESULTADO](images/RESULTADOBUSCA.png)
+
+##### Tela do Forum
+
+Página dedicada a um fórum específico, com o título do tema em destaque, postagens e comentários.
+
+![FORUM](images/TELAFORUM.png)
+
+Podendo tambem entrar em um comentario especifico
+
+![COMENTARIOS](images/TELACOMENTARIO1.png)
+![COMENTARIOS](images/TELACOMENTARIO2.png)
+
+
 
 ### User Flow
 
@@ -255,7 +268,7 @@ Descrição para a tela XPTO
 
 **✳️✳️✳️ COLOQUE AQUI UM IFRAME COM SEU PROTÓTIPO INTERATIVO ✳️✳️✳️**
 
-✅ [Protótipo Interativo (MarvelApp)](https://marvelapp.com/prototype/4hd6091?emb=1&iosapp=false&frameless=false)  ⚠️ EXEMPLO ⚠️
+✅ [Protótipo Interativo (Figma)](https://www.figma.com/proto/upou2SRsBvZQiLatAZVL2w/Untitled?node-id=1-4&node-type=canvas&t=TQtJWTTKragv18Qf-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A4)
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
