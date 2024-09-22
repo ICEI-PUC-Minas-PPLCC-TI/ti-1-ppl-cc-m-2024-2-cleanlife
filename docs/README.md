@@ -228,12 +228,9 @@ Após o login, o usuário é direcionado para a tela principal da plataforma, on
 
 ![HOME](images/HOME(forum).png)
 
-##### Tela de Busca
+Podendo tambem criar um novo Forum
 
-Tela onde o usuario pode pesquisar o forum de seu interesse.
-
-![BUSCA](images/BUSCA.png)
-![RESULTADO](images/RESULTADOBUSCA.png)
+![HOMECRIAR](images/CRIAR.png)
 
 ##### Tela do Forum
 
@@ -246,7 +243,49 @@ Podendo tambem entrar em um comentario especifico
 ![COMENTARIOS](images/TELACOMENTARIO1.png)
 ![COMENTARIOS](images/TELACOMENTARIO2.png)
 
+Exemplo de Forum vazio (novo)
 
+![NOVO](images/NOVOFORUM.png)
+
+##### Tela de Busca
+
+Tela onde o usuario pode pesquisar o forum de seu interesse.
+
+![BUSCA](images/BUSCA.png)
+![RESULTADO](images/RESULTADOBUSCA.png)
+
+##### Tela do Contador de Dias Sobrios
+
+Tela onde o usuário visualiza há quanto tempo está sóbrio, acompanhando seu progresso e batendo metas.
+
+![DIAS](images/DIAS.png)
+
+Podendo reiniciar o contador
+
+![CERTEZA](images/CERTEZA.png)
+![REINICIADO](images/REINICIADO.png)
+
+##### Tela do Perfil
+
+Tela onde o usuário visualiza seu perfil.
+
+![PERFIL](images/PERFIL.png)
+
+Podendo editar suas informações
+
+![EDITARPERFIL](images/EDITARPERFIL.png)
+
+##### Tela dos Parceiros
+
+Tela onde o usuário encontra clinicas parceiras.
+
+![PARCEIROS](images/PARCEIROS.png)
+
+##### Tela Saiba Mais
+
+Tela onde o usuário encontra artigos que recomendamos, e tambem pode pesquisar por artigos de seu interesse.
+
+![SAIBAMAIS](images/SAIBAMAIS.png)
 
 ### User Flow
 
