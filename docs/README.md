@@ -149,18 +149,14 @@ Nesse momento, vamos transformar os insights e validações obtidos em soluçõe
 Com base na análise das personas foram identificadas as seguintes histórias de usuários:
 
 | EU COMO...`PERSONA` | QUERO/PRECISO ...`FUNCIONALIDADE`        | PARA ...`MOTIVO/VALOR`               |
-| --------------------- | ------------------------------------------ | -------------------------------------- |
-| Usuário do sistema   | Registrar minhas tarefas ⚠️ EXEMPLO ⚠️ | Não esquecer de fazê-las             |
-| Administrador         | Alterar permissões ⚠️ EXEMPLO ⚠️      | Permitir que possam administrar contas |
+| --------------------| -----------------------------------------| -------------------------------------- |
+| Usuário anônimo     | Criar uma conta no fórum. | Poder participar das discussões, criar tópicos e comentar anonimamente.             |
+| Usuário registrado  | Criar um novo tópico sobre um tema específico. | Discutir minha experiência com vícios e obter ajuda e conselhos de outros membros da comunidade. |
+| Usuário registrado  | Denunciar um conteúdo que considero ofensivo ou perigoso. | Para que os moderadores possam tomar providências e manter o fórum um lugar seguro para todos. |
+| Usuário registrado  | Pesquisar tópicos usando palavras-chave relacionadas ao tema.  | Encontrar discussões e informações rapidamente sobre questões específicas que me interessam. |
+| Usuário registrado  | Editar minhas informações de perfil e escolher um pseudônimo.  | Garantir minha privacidade e personalizar meu perfil no fórum. |
+| Usuário registrado  | Responder a tópicos com meus comentários.  | Compartilhar minha experiência ou opinião e ajudar outros usuários com suas dúvidas ou preocupações. |
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
->
-> **Orientações**:
->
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
 
 ## Proposta de Valor
 
