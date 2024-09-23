@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="introdu%C3%A7%C3%A3o">Introdução</h1>
+<p>Informações básicas do projeto.</p>
+<ul>
+<li>
+<p><strong>Projeto:</strong> CleanLife</p>
+</li>
+<li>
+<p><strong>Repositório GitHub:</strong> https://github.com/ICEI-PUC-Minas-PPLCC-TI/ti-1-ppl-cc-m-2024-2-cleanlife</p>
+</li>
+<li>
+<p><strong>Membros da equipe:</strong></p>
+<ul>
+<li><a href="https://github.com/sevak19">Arthur Costa Serra Negra</a></li>
+<li><a href="https://github.com/BernardoPiresMascarenhas">Bernardo Pires Mascarenhas</a></li>
+<li><a href="https://github.com/Porosa">Enzo Piacenza Werneck da Rocha</a></li>
+<li><a href="https://github.com/lucasstc">Lucas Stancioli Siqueira</a></li>
+<li><a href="https://github.com/samuellagee">Samuel Lage Spalla Fajardo</a></li>
+<li><a href="https://github.com/Pedrouo">Pedro Fonseca Silva</a></li>
+</ul>
+</li>
+</ul>
+<p>A documentação do projeto é estruturada da seguinte forma:</p>
+<ol>
+<li>Introdução</li>
+<li>Contexto</li>
+<li>Product Discovery</li>
+<li>Product Design</li>
+<li>Metodologia</li>
+<li>Solução</li>
+<li>Referências Bibliográficas</li>
+</ol>
+<p>✅ <a href="files/processo-dt.pdf">Documentação de Design Thinking (MIRO)</a></p>
+<h1 id="contexto">Contexto</h1>
+<h2 id="problema">Problema</h2>
+<p>O vício em drogas continua sendo um grande desafio global, afetando não so a vida dos usuarios mas também seus famíliares, amigos e a sociedade em geral. Embora existam muitas formas de tratamento, a falta de apoio social e emocional frequentemente dificulta a recuperação. Muitos usuários enfrentam estigma social e dificuldades em buscar ajuda, o que resulta em isolamento e recaídas.</p>
+<p>Atualmente, há uma lacuna significativa em plataformas que promovam um espaço seguro, colaborativo e acessível para que essas pessoas possam compartilhar suas histórias, obter aconselhamento e encontrar uma comunidade de apoio.</p>
+<p>Embora existam métodos clínicos e terapêuticos disponíveis para tratar o vício, muitos dependentes não têm acesso contínuo a redes de apoio ou desistem do tratamento por falta de suporte social. O estigma associado ao vício muitas vezes impede os indivíduos de buscar ajuda, levando-os ao isolamento, o que agrava as chances de recaída. Além disso, as famílias e amigos, que desempenham um papel crucial na recuperação, muitas vezes se sentem despreparados para oferecer suporte adequado.</p>
+<p>O contexto em que essa aplicação será usada envolve o ambiente digital, onde viciados, ex-viciados, familiares e especialistas poderão interagir sem medo de julgamento, de forma anônima e segura. O uso de tecnologias voltadas para fóruns, redes sociais e troca de mensagens será essencial para facilitar a comunicação e a troca de experiências entre os participantes. A aplicação se insere em um cenário onde a conectividade e o acesso a informações são fundamentais, criando um ponto de encontro virtual para uma comunidade que, de outra forma, seria difícil de organizar e sustentar.</p>
+<p>Este ambiente digital pretende aproveitar a ubiquidade da internet e dispositivos móveis para fornecer suporte contínuo e de fácil acesso a qualquer hora e lugar, garantindo que os usuários possam recorrer à plataforma sempre que necessário.</p>
+<h2 id="objetivos">Objetivos</h2>
+<p>O principal objetivo do <em>CleanLife</em> é desenvolver um software que ofereça um espaço digital acolhedor e seguro onde pessoas em processo de recuperação de vícios possam interagir, compartilhar experiências e buscar apoio mútuo. Esse software tem como meta solucionar o problema do isolamento e da falta de suporte emocional e social enfrentados por muitos dependentes, criando uma plataforma que promova a troca de conhecimentos e vivências entre os participantes.</p>
+<p><strong>O objetivo geral</strong> do <em>CleanLife</em> é criar uma aplicação que facilite a formação de uma comunidade colaborativa, onde os usuários possam encontrar força e apoio para superar o vício. Para isso, a plataforma será desenvolvida com foco na acessibilidade, permitindo que viciados, ex-viciados, familiares e especialistas interajam de forma anônima, troquem conselhos e ofereçam suporte uns aos outros, independentemente de suas localizações geográficas.</p>
+<h3 id="objetivos-espec%C3%ADficos">Objetivos específicos:</h3>
+<p><strong>Promover um ambiente digital seguro e anônimo:</strong></p>
+<ul>
+<li>Um dos principais focos do projeto é garantir que os usuários possam participar da plataforma sem medo de julgamento ou exposição. Isso será alcançado através do desenvolvimento de mecanismos de anonimato e moderação eficaz, criando um espaço onde os usuários se sintam à vontade para compartilhar suas experiências e buscar apoio sem constrangimento.</li>
+</ul>
+<p><strong>Mapear e identificar as melhores práticas de moderação e suporte em comunidades online:</strong></p>
+<ul>
+<li>Estudar outras plataformas de fóruns e redes de apoio, identificando estratégias de sucesso em termos de moderação, apoio mútuo e engajamento dos usuários. Aplicar essas práticas no <em>CleanLife</em> para criar um ambiente virtual seguro e acolhedor.</li>
+</ul>
+<p><strong>Facilitar a integração de recursos úteis para a recuperação:</strong></p>
+<ul>
+<li>Integrar na plataforma materiais educativos e recursos práticos, como links para clínicas de reabilitação, métodos de tratamento, e artigos sobre saúde mental e dependência. Através dessas funcionalidades, o <em>CleanLife</em> oferecerá mais do que apenas um fórum de discussão, tornando-se uma ferramenta abrangente para auxiliar o processo de recuperação.</li>
+</ul>
+<p>Esses objetivos específicos permitem ir além da simples comunicação entre usuários, criando um espaço digital que não apenas promove o fortalecimento pessoal, mas também proporciona acesso a informações vitais para a superação do vício.</p>
+<h2 id="justificativa">Justificativa</h2>
+<p>A necessidade de apoio emocional e social no processo de recuperação do vício é amplamente reconhecida por profissionais da saúde mental, terapeutas e pela própria comunidade de pessoas em reabilitação. No entanto, existe uma lacuna significativa em plataformas que ofereçam esse suporte de forma acessível, segura e anônima. O projeto <em>CleanLife</em> justifica-se por preencher essa lacuna, oferecendo um espaço digital que promove a interação entre indivíduos em diferentes estágios de recuperação, ex-viciados, familiares e profissionais, criando uma rede de apoio onde os usuários podem compartilhar suas histórias, trocar conselhos e se sentirem acolhidos em um ambiente livre de julgamento.</p>
+<h3 id="por-qu%C3%AA">Por quê?</h3>
+<p>Potencial de impactar diretamente a vida de pessoas em recuperação, ao atender a uma necessidade crítica de suporte contínuo e acessível. O isolamento social, o estigma e a falta de redes de apoio são barreiras significativas para aqueles que lutam contra o vício. A escolha desse tema reflete a oportunidade de usar a tecnologia para criar uma comunidade digital que encoraje o fortalecimento pessoal e a superação do vício por meio do apoio mútuo.</p>
+<h3 id="o-qu%C3%AA">O quê?</h3>
+<p>A função do <em>CleanLife</em> é fornecer uma plataforma digital que atue como uma rede de suporte emocional e social. A plataforma visa facilitar a troca de experiências e informações, além de promover um ambiente colaborativo onde os participantes possam se sentir compreendidos e motivados a continuar sua jornada de recuperação. Através de funcionalidades como fóruns de discussão anônimos, recursos educativos e acompanhamento do progresso pessoal, o <em>CleanLife</em> ajudará os usuários a reduzirem o sentimento de isolamento.</p>
+<h3 id="quem">Quem?</h3>
+<p>O público-alvo do <em>CleanLife</em> inclui:</p>
+<ul>
+<li>Pessoas em processo de recuperação de vícios: que necessitam de um espaço seguro para buscar apoio e compartilhar suas experiências.</li>
+<li>Ex-viciados: que podem contribuir com suas histórias de sucesso e fornecer conselhos para aqueles que estão nos estágios iniciais de recuperação.</li>
+<li>Familiares e amigos de dependentes: que também buscam orientação sobre como ajudar seus entes queridos no processo de recuperação.</li>
+<li>Profissionais de saúde mental e especialistas em reabilitação: que podem fornecer aconselhamento e recursos especializados.</li>
+</ul>
+<h3 id="base">Base</h3>
+<p>O trabalho do <em>CleanLife</em> está fundamentado em dados coletados por meio de pesquisas, entrevistas com o público-alvo, entrevistas com profissionais da área de saúde mental e dependência, além de estatísticas sobre a eficácia do suporte emocional no processo de recuperação. A escolha dos objetivos foi guiada por essas informações, que apontam para a importância de criar um ambiente seguro e anônimo, com recursos acessíveis e fáceis de usar, que respondam diretamente às principais dificuldades enfrentadas por quem esta no processo de recuperação.</p>
+<p>Estudos mostram que plataformas digitais têm o potencial de aumentar o engajamento e o sucesso em tratamentos de vício, mas ainda faltam espaços voltados especificamente para o apoio emocional e social. A criação de um ambiente onde a troca de experiências e a solidariedade são incentivadas se baseia também em teorias de resiliência e comunidades de prática, onde o compartilhamento de conhecimentos e vivências fortalece os indivíduos e suas capacidades de enfrentamento.</p>
+<p>Portanto, o <em>CleanLife</em> se justifica não apenas pela inovação tecnológica, mas pela oportunidade de criar um espaço que se torne um ponto de apoio crucial no processo de reabilitação, impactando positivamente a vida de seus usuários e promovendo um caminho mais acessível para a recuperação.</p>
+<h2 id="p%C3%BAblico-alvo">Público-Alvo</h2>
+<p>O público-alvo do <em>CleanLife</em> abrange diferentes perfis de usuários, todos conectados pela busca por apoio no processo de recuperação do vício em drogas. Esse público inclui:</p>
+<ol>
+<li>
+<p>Pessoas em recuperação ou em busca de tratamento: Indivíduos que estão enfrentando ou já enfrentaram o vício e desejam uma rede de suporte emocional e social. São usuários que, em sua maioria, podem não ter grande familiaridade com a tecnologia, mas buscam uma plataforma intuitiva e acessível que lhes permita interagir anonimamente, trocando experiências com outras pessoas na mesma jornada. Muitos desses indivíduos podem já ter passado por tratamentos em clínicas de reabilitação, mas ainda necessitam de acompanhamento contínuo e suporte emocional.</p>
+</li>
+<li>
+<p>Familiares e amigos de dependentes: Um grupo que, muitas vezes, busca entender melhor como ajudar e lidar com seus entes queridos que enfrentam o vício. Eles podem usar a plataforma para buscar orientação e participar de discussões que os ajudem a compreender melhor o processo de recuperação e oferecer apoio efetivo. Embora possam ter maior familiaridade com o uso de plataformas digitais, sua principal motivação é o acesso rápido e confiável a informações e apoio.</p>
+</li>
+<li>
+<p>Profissionais de saúde mental e reabilitação: Psiquiatras, psicólogos, terapeutas e outros especialistas na área de saúde mental e dependência química também fazem parte do público-alvo. Esses profissionais podem utilizar o <em>CleanLife</em> como uma ferramenta de extensão para monitorar o progresso de seus pacientes, interagir com a comunidade e fornecer orientações baseadas em evidências. Como esse público tem mais familiaridade com tecnologias de acompanhamento de pacientes e fóruns de discussão profissional, podem valorizar recursos avançados de monitoramento e gestão.</p>
+</li>
+<li>
+<p>ONGs e organizações de reabilitação: Instituições que trabalham diretamente com a recuperação e reinserção social de pessoas dependentes de drogas também podem usar a plataforma como um canal adicional de suporte. Essas organizações podem integrar seus serviços ao <em>CleanLife</em> para fornecer apoio e aconselhamento contínuo, alcançando os participantes de forma mais direta e eficaz.</p>
+</li>
+</ol>
+<h3 id="personas">Personas:</h3>
+<ul>
+<li>
+<p>Persona 1: João, 34 anos, em recuperação há 6 meses
+João já passou por tratamento em uma clínica, mas sente que ainda precisa de apoio constante para evitar recaídas. Ele tem pouca experiência com tecnologia e busca uma plataforma simples e acessível onde possa compartilhar sua jornada de forma anônima.</p>
+</li>
+<li>
+<p>Persona 2: Maria, 45 anos, mãe de um adolescente em recuperação
+Maria está desesperada para ajudar seu filho, mas não sabe por onde começar. Ela quer uma plataforma onde possa aprender mais sobre o vício e conversar com outras mães que passaram pela mesma situação.</p>
+</li>
+<li>
+<p>Persona 3: Dr. Ricardo, 52 anos, psicólogo especialista em dependência química
+Dr. Ricardo usa a tecnologia no dia a dia para acompanhar seus pacientes e está sempre em busca de novas ferramentas que possam melhorar o processo de recuperação. Ele vê o CleanLife como uma extensão de seu consultório, onde pode monitorar discussões e oferecer suporte especializado.</p>
+</li>
+</ul>
+<p>Esses perfis demonstram como a plataforma <em>CleanLife</em> atende a uma diversidade de usuários com diferentes níveis de conhecimento tecnológico e diversas relações com o problema do vício, oferecendo soluções personalizadas e focadas nas necessidades de cada grupo.</p>
+<h1 id="product-discovery">Product Discovery</h1>
+<h2 id="etapa-de-entendimento">Etapa de Entendimento</h2>
+<h3 id="matriz-csd">MATRIZ CSD</h3>
+<p><img src="file:///home/sevak/projetos/ti-1-ppl-cc-m-2024-2-cleanlife/docs/images/MATRIZCSD.png" alt="MATRIZCSD"></p>
+<h3 id="mapa-de-stakeholders">MAPA DE STAKEHOLDERS</h3>
+<p><img src="file:///home/sevak/projetos/ti-1-ppl-cc-m-2024-2-cleanlife/docs/images/STAKEHOLDERS.png" alt="STAKEHOLDERS"></p>
+<h3 id="entrevista-qualitativa">ENTREVISTA QUALITATIVA</h3>
+<p><img src="file:///home/sevak/projetos/ti-1-ppl-cc-m-2024-2-cleanlife/docs/images/ENTREVISTA.png" alt="ENTREVISTA"></p>
+<h3 id="highlights-de-pesquisa">HIGHLIGHTS DE PESQUISA</h3>
+<p><img src="file:///home/sevak/projetos/ti-1-ppl-cc-m-2024-2-cleanlife/docs/images/HIGHLIGHTS.png" alt="HIGHLIGHTS"></p>
+<h2 id="etapa-de-defini%C3%A7%C3%A3o">Etapa de Definição</h2>
+<h3 id="personas">Personas</h3>
+<h3 id="persona-1">PERSONA 1</h3>
+<p><img src="file:///home/sevak/projetos/ti-1-ppl-cc-m-2024-2-cleanlife/docs/images/PERSONA1.png" alt="PERSONA1"></p>
+<h3 id="persona-2">PERSONA 2</h3>
+<p><img src="file:///home/sevak/projetos/ti-1-ppl-cc-m-2024-2-cleanlife/docs/images/PERSONA2.png" alt="PERSONA2"></p>
+<h3 id="persona-3">PERSONA 3</h3>
+<p><img src="file:///home/sevak/projetos/ti-1-ppl-cc-m-2024-2-cleanlife/docs/images/PERSONA3.png" alt="PERSONA3"></p>
+<h1 id="product-design">Product Design</h1>
+<p>Nesse momento, vamos transformar os insights e validações obtidos em soluções tangíveis e utilizáveis. Essa fase envolve a definição de uma proposta de valor, detalhando a prioridade de cada ideia e a consequente criação de wireframes, mockups e protótipos de alta fidelidade, que detalham a interface e a experiência do usuário.</p>
+<h2 id="hist%C3%B3rias-de-usu%C3%A1rios">Histórias de Usuários</h2>
+<p>Com base na análise das personas foram identificadas as seguintes histórias de usuários:</p>
+<table>
+<thead>
+<tr>
+<th>EU COMO...<code>PERSONA</code></th>
+<th>QUERO/PRECISO ...<code>FUNCIONALIDADE</code></th>
+<th>PARA ...<code>MOTIVO/VALOR</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Usuário anônimo</td>
+<td>Criar uma conta no fórum.</td>
+<td>Poder participar das discussões, criar tópicos e comentar anonimamente.</td>
+</tr>
+<tr>
+<td>Usuário registrado</td>
+<td>Criar um novo tópico sobre um tema específico.</td>
+<td>Discutir minha experiência com vícios e obter ajuda e conselhos de outros membros da comunidade.</td>
+</tr>
+<tr>
+<td>Usuário registrado</td>
+<td>Denunciar um conteúdo que considero ofensivo ou perigoso.</td>
+<td>Para que os moderadores possam tomar providências e manter o fórum um lugar seguro para todos.</td>
+</tr>
+<tr>
+<td>Usuário registrado</td>
+<td>Pesquisar tópicos usando palavras-chave relacionadas ao tema.</td>
+<td>Encontrar discussões e informações rapidamente sobre questões específicas que me interessam.</td>
+</tr>
+<tr>
+<td>Usuário registrado</td>
+<td>Editar minhas informações de perfil e escolher um pseudônimo.</td>
+<td>Garantir minha privacidade e personalizar meu perfil no fórum.</td>
+</tr>
+<tr>
+<td>Usuário registrado</td>
+<td>Responder a tópicos com meus comentários.</td>
+<td>Compartilhar minha experiência ou opinião e ajudar outros usuários com suas dúvidas ou preocupações.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="proposta-de-valor">Proposta de Valor</h2>
+<h3 id="proposta-de-valor-para-persona-1">PROPOSTA DE VALOR PARA PERSONA 1</h3>
+<p><img src="file:///home/sevak/projetos/ti-1-ppl-cc-m-2024-2-cleanlife/docs/images/PROPOSTA1.png" alt="PROPOSTA1"></p>
+<h3 id="proposta-de-valor-para-persona-2">PROPOSTA DE VALOR PARA PERSONA 2</h3>
+<p><img src="file:///home/sevak/projetos/ti-1-ppl-cc-m-2024-2-cleanlife/docs/images/PROPOSTA2.png" alt="PROPOSTA2"></p>
+<h3 id="proposta-de-valor-para-persona-3">PROPOSTA DE VALOR PARA PERSONA 3</h3>
+<p><img src="file:///home/sevak/projetos/ti-1-ppl-cc-m-2024-2-cleanlife/docs/images/PROPOSTA3.png" alt="PROPOSTA3"></p>
+<h2 id="requisitos">Requisitos</h2>
+<p>As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.</p>
+<h3 id="requisitos-funcionais">Requisitos Funcionais</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Descrição do Requisito</th>
+<th>Prioridade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RF-001</td>
+<td>O sistema deve permitir que os usuários criem uma conta com um e-mail válido, senha e opcionalmente um pseudônimo para garantir anonimato.</td>
+<td>ALTA</td>
+</tr>
+<tr>
+<td>RF-002</td>
+<td>O sistema deve permitir que os usuários realizem login com suas credenciais e façam logout de forma segura.</td>
+<td>ALTA</td>
+</tr>
+<tr>
+<td>RF-003</td>
+<td>O sistema deve permitir que os usuários criem novos tópicos relacionados ao tema de vícios, com título, descrição e palavras-chave.</td>
+<td>MÉDIA</td>
+</tr>
+<tr>
+<td>RF-004</td>
+<td>O sistema deve permitir que os usuários respondam aos tópicos com comentários, possibilitando a interação e discussão sobre o tema abordado.</td>
+<td>MÉDIA</td>
+</tr>
+<tr>
+<td>RF-005</td>
+<td>O sistema deve permitir que moderadores designados possam aprovar ou remover tópicos e comentários que infrinjam as regras do fórum.</td>
+<td>ALTA</td>
+</tr>
+<tr>
+<td>RF-006</td>
+<td>O sistema deve permitir que os usuários denunciem conteúdo inadequado (como apologia a drogas ou uso de linguagem ofensiva) para que seja avaliado pelos moderadores.</td>
+<td>ALTA</td>
+</tr>
+<tr>
+<td>RF-007</td>
+<td>O sistema deve permitir que os usuários classifiquem os tópicos (ex: relevante, útil, etc.).</td>
+<td>BAIXA</td>
+</tr>
+<tr>
+<td>RF-008</td>
+<td>O sistema deve oferecer uma funcionalidade de busca, permitindo que os usuários localizem tópicos e discussões por palavras-chave ou categorias.</td>
+<td>MÉDIA</td>
+</tr>
+<tr>
+<td>RF-009</td>
+<td>O sistema deve permitir que os usuários visualizem e editem seus perfis, incluindo informações pessoais.</td>
+<td>MÉDIA</td>
+</tr>
+<tr>
+<td>RF-0010</td>
+<td>O sistema deve fazer uma contagem de dias sobrios para cada usuarios, e permitir que eles resetem tal contagem.</td>
+<td>MÉDIA</td>
+</tr>
+</tbody>
+</table>
+<h3 id="requisitos-n%C3%A3o-funcionais">Requisitos não Funcionais</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Descrição do Requisito</th>
+<th>Prioridade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RNF-001</td>
+<td>O sistema deve ser simples de navegar, com uma interface amigável para diferentes tipos de usuários, incluindo aqueles com pouca experiência tecnológica</td>
+<td>ALTA</td>
+</tr>
+<tr>
+<td>RNF-002</td>
+<td>O sistema deve ser compatível com os navegadores mais comuns (Chrome, Firefox e Edge) e funcionar tanto em dispositivos móveis quanto em desktops.</td>
+<td>MÉDIA</td>
+</tr>
+<tr>
+<td>RNF-003</td>
+<td>Uso do mesmo css: O design da interface deve utilizar o mesmo estilo css, para ficar linear.</td>
+<td>BAIXA</td>
+</tr>
+<tr>
+<td>RNF-004</td>
+<td>O sistema deve implementar apenas as funcionalidades essenciais para o fórum, deixando recursos avançados para futuras iterações.</td>
+<td>MÉDIA</td>
+</tr>
+</tbody>
+</table>
+<h2 id="projeto-de-interface">Projeto de Interface</h2>
+<p>Artefatos relacionados com a interface e a interacão do usuário na proposta de solução.</p>
+<h3 id="wireframes">Wireframes</h3>
+<p>Estes são os protótipos de telas do sistema.</p>
+<h5 id="tela-de-boas-vindas--sobre-n%C3%B3s">Tela de Boas-Vindas / Sobre Nós</h5>
+<p>A primeira tela que o usuário vê ao acessar a plataforma. Ela apresenta o CleanLife de forma acolhedora e explica a missão da plataforma, destacando a importância da comunidade no processo de recuperação.</p>
+<p><img src="file:///home/sevak/projetos/ti-1-ppl-cc-m-2024-2-cleanlife/docs/images/SobreNos(deslogado).png" alt="SobreNos"></p>
+<h5 id="tela-dos-foruns--home">Tela dos Foruns / HOME</h5>
+<p>Após o login, o usuário é direcionado para a tela principal da plataforma, onde pode visualizar tópicos populares, acessar fóruns e criar seu proprio forum.</p>
+<p><img src="file:///home/sevak/projetos/ti-1-ppl-cc-m-2024-2-cleanlife/docs/images/HOME(forum).png" alt="HOME"></p>
+<p>Podendo tambem criar um novo Forum</p>
+<p><img src="file:///home/sevak/projetos/ti-1-ppl-cc-m-2024-2-cleanlife/docs/images/CRIAR.png" alt="HOMECRIAR"></p>
+<h5 id="tela-do-forum">Tela do Forum</h5>
+<p>Página dedicada a um fórum específico, com o título do tema em destaque, postagens e comentários.</p>
+<p><img src="file:///home/sevak/projetos/ti-1-ppl-cc-m-2024-2-cleanlife/docs/images/TELAFORUM.png" alt="FORUM"></p>
+<p>Podendo tambem entrar em um comentario especifico</p>
+<p><img src="file:///home/sevak/projetos/ti-1-ppl-cc-m-2024-2-cleanlife/docs/images/TELACOMENTARIO1.png" alt="COMENTARIOS">
+<img src="file:///home/sevak/projetos/ti-1-ppl-cc-m-2024-2-cleanlife/docs/images/TELACOMENTARIO2.png" alt="COMENTARIOS"></p>
+<p>Exemplo de Forum vazio (novo)</p>
+<p><img src="file:///home/sevak/projetos/ti-1-ppl-cc-m-2024-2-cleanlife/docs/images/NOVOFORUM.png" alt="NOVO"></p>
+<h5 id="tela-de-busca">Tela de Busca</h5>
+<p>Tela onde o usuario pode pesquisar o forum de seu interesse.</p>
+<p><img src="file:///home/sevak/projetos/ti-1-ppl-cc-m-2024-2-cleanlife/docs/images/BUSCA.png" alt="BUSCA">
+<img src="file:///home/sevak/projetos/ti-1-ppl-cc-m-2024-2-cleanlife/docs/images/RESULTADOBUSCA.png" alt="RESULTADO"></p>
+<h5 id="tela-do-contador-de-dias-sobrios">Tela do Contador de Dias Sobrios</h5>
+<p>Tela onde o usuário visualiza há quanto tempo está sóbrio, acompanhando seu progresso e batendo metas.</p>
+<p><img src="file:///home/sevak/projetos/ti-1-ppl-cc-m-2024-2-cleanlife/docs/images/DIAS.png" alt="DIAS"></p>
+<p>Podendo reiniciar o contador</p>
+<p><img src="file:///home/sevak/projetos/ti-1-ppl-cc-m-2024-2-cleanlife/docs/images/CERTEZA.png" alt="CERTEZA">
+<img src="file:///home/sevak/projetos/ti-1-ppl-cc-m-2024-2-cleanlife/docs/images/REINICIADO.png" alt="REINICIADO"></p>
+<h5 id="tela-do-perfil">Tela do Perfil</h5>
+<p>Tela onde o usuário visualiza seu perfil.</p>
+<p><img src="file:///home/sevak/projetos/ti-1-ppl-cc-m-2024-2-cleanlife/docs/images/PERFIL.png" alt="PERFIL"></p>
+<p>Podendo editar suas informações</p>
+<p><img src="file:///home/sevak/projetos/ti-1-ppl-cc-m-2024-2-cleanlife/docs/images/EDITARPERFIL.png" alt="EDITARPERFIL"></p>
+<h5 id="tela-dos-parceiros">Tela dos Parceiros</h5>
+<p>Tela onde o usuário encontra clinicas parceiras.</p>
+<p><img src="file:///home/sevak/projetos/ti-1-ppl-cc-m-2024-2-cleanlife/docs/images/PARCEIROS.png" alt="PARCEIROS"></p>
+<h5 id="tela-saiba-mais">Tela Saiba Mais</h5>
+<p>Tela onde o usuário encontra artigos que recomendamos, e tambem pode pesquisar por artigos de seu interesse.</p>
+<p><img src="file:///home/sevak/projetos/ti-1-ppl-cc-m-2024-2-cleanlife/docs/images/SAIBAMAIS.png" alt="SAIBAMAIS"></p>
+<h3 id="user-flow">User Flow</h3>
+<p><img src="file:///home/sevak/projetos/ti-1-ppl-cc-m-2024-2-cleanlife/docs/images/USERFLOW.png" alt="USERFLOW"></p>
+<h3 id="prot%C3%B3tipo-interativo">Protótipo Interativo</h3>
+<p>✅ <a href="https://www.figma.com/proto/upou2SRsBvZQiLatAZVL2w/Untitled?node-id=1-4&amp;node-type=canvas&amp;t=TQtJWTTKragv18Qf-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=0%3A1&amp;starting-point-node-id=1%3A4">Protótipo Interativo (Figma)</a></p>
+<h1 id="metodologia">Metodologia</h1>
+<table>
+<thead>
+<tr>
+<th>INTEGRANTE</th>
+<th>PAPEL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arthur Costa Serra Negra</td>
+<td>Documentacao e Wireframe</td>
+</tr>
+<tr>
+<td>Bernardo Pires Mascarenhas</td>
+<td>Documentacao e Miro</td>
+</tr>
+<tr>
+<td>Enzo Piacenza Werneck da Rocha</td>
+<td>Miro</td>
+</tr>
+<tr>
+<td>Lucas Stancioli Siqueira</td>
+<td>Documentacao e Miro</td>
+</tr>
+<tr>
+<td>Samuel Lage Spalla Fajardo</td>
+<td>PowerPoint</td>
+</tr>
+<tr>
+<td>Pedro Fonseca Silva</td>
+<td>Miro</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ferramentas">Ferramentas</h2>
+<p>Relação de ferramentas empregadas pelo grupo durante o projeto.</p>
+<table>
+<thead>
+<tr>
+<th>Ambiente</th>
+<th>Plataforma</th>
+<th>Link de acesso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Processo de Design Thinking</td>
+<td>Miro</td>
+<td>https://miro.com/XXXXXXX ⚠️ EXEMPLO ⚠️</td>
+</tr>
+<tr>
+<td>Repositório de código</td>
+<td>GitHub</td>
+<td>https://github.com/XXXXXXX ⚠️ EXEMPLO ⚠️</td>
+</tr>
+<tr>
+<td>Hospedagem do site</td>
+<td>Render</td>
+<td>https://site.render.com/XXXXXXX ⚠️ EXEMPLO ⚠️</td>
+</tr>
+<tr>
+<td>Protótipo Interativo</td>
+<td>MarvelApp</td>
+<td>https://marvelapp.com/XXXXXXX ⚠️ EXEMPLO ⚠️</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO</strong></p>
+<p>Liste as ferramentas empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível. Inclua itens como: (1) Editor de código, (2) )ferramentas de comunicação, (3) )ferramentas de diagramação, (4) )plataformas de hospedagem, entre outras.</p>
+</blockquote>
+<h2 id="gerenciamento-do-projeto">Gerenciamento do Projeto</h2>
+<p>Divisão de papéis no grupo e apresentação da estrutura da ferramenta de controle de tarefas (Kanban).</p>
+<table>
+<thead>
+<tr>
+<th><strong>Integrante</strong></th>
+<th><strong>Papel</strong></th>
+<th><strong>A Fazer</strong></th>
+<th><strong>Fazendo</strong></th>
+<th><strong>Concluído</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arthur Costa Serra Negra</td>
+<td>Documentação e Wireframe</td>
+<td></td>
+<td></td>
+<td>Documentação e Wireframe Finalizado</td>
+</tr>
+<tr>
+<td>Bernardo Pires Mascarenhas</td>
+<td>Documentação e Miro</td>
+<td></td>
+<td></td>
+<td>Documentação e Miro Concluído</td>
+</tr>
+<tr>
+<td>Enzo Piacenza Werneck da Rocha</td>
+<td>Miro</td>
+<td></td>
+<td></td>
+<td>Miro Concluído</td>
+</tr>
+<tr>
+<td>Lucas Stancioli Siqueira</td>
+<td>Documentação e Miro</td>
+<td></td>
+<td></td>
+<td>Documentação e Miro Concluído</td>
+</tr>
+<tr>
+<td>Samuel Lage Spalla Fajardo</td>
+<td>PowerPoint</td>
+<td></td>
+<td></td>
+<td>PowerPoint Concluído</td>
+</tr>
+<tr>
+<td>Pedro Fonseca Silva</td>
+<td>Miro</td>
+<td></td>
+<td></td>
+<td>Miro Concluído</td>
+</tr>
+</tbody>
+</table>
+<h1 id="solu%C3%A7%C3%A3o-implementada">Solução Implementada</h1>
+<p>Esta seção apresenta todos os detalhes da solução criada no projeto.</p>
+<h2 id="v%C3%ADdeo-do-projeto">Vídeo do Projeto</h2>
+<p>O vídeo a seguir traz uma apresentação do problema que a equipe está tratando e a proposta de solução. ⚠️ EXEMPLO ⚠️</p>
+<p><a href="https://www.youtube.com/embed/70gGoFyGeqQ"><img src="file:///home/sevak/projetos/ti-1-ppl-cc-m-2024-2-cleanlife/docs/images/video.png" alt="Vídeo do projeto"></a></p>
+<blockquote>
+<p>⚠️ <strong>APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO</strong></p>
+<p>O video de apresentação é voltado para que o público externo possa conhecer a solução. O formato é livre, sendo importante que seja apresentado o problema e a solução numa linguagem descomplicada e direta.</p>
+<p>Inclua um link para o vídeo do projeto.</p>
+</blockquote>
+<h2 id="funcionalidades">Funcionalidades</h2>
+<p>Esta seção apresenta as funcionalidades da solução.Info</p>
+<h5 id="funcionalidade-1---cadastro-de-contatos-%E2%9A%A0%EF%B8%8F-exemplo-%E2%9A%A0%EF%B8%8F">Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️</h5>
+<p>Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema</p>
+<ul>
+<li><strong>Estrutura de dados:</strong> <a href="#ti_ed_contatos">Contatos</a></li>
+<li><strong>Instruções de acesso:</strong>
+<ul>
+<li>Abra o site e efetue o login</li>
+<li>Acesse o menu principal e escolha a opção Cadastros</li>
+<li>Em seguida, escolha a opção Contatos</li>
+</ul>
+</li>
+<li><strong>Tela da funcionalidade</strong>:</li>
+</ul>
+<p><img src="file:///home/sevak/projetos/ti-1-ppl-cc-m-2024-2-cleanlife/docs/images/exemplo-funcionalidade.png" alt="Tela de Funcionalidade"></p>
+<blockquote>
+<p>⚠️ <strong>APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO</strong></p>
+<p>Apresente cada uma das funcionalidades que a aplicação fornece tanto para os usuários quanto aos administradores da solução.</p>
+<p>Inclua, para cada funcionalidade, itens como: (1) titulos e descrição da funcionalidade; (2) Estrutura de dados associada; (3) o detalhe sobre as instruções de acesso e uso.</p>
+</blockquote>
+<h2 id="estruturas-de-dados">Estruturas de Dados</h2>
+<p>Descrição das estruturas de dados utilizadas na solução com exemplos no formato JSON.Info</p>
+<h5 id="estrutura-de-dados---contatos-%E2%9A%A0%EF%B8%8F-exemplo-%E2%9A%A0%EF%B8%8F">Estrutura de Dados - Contatos   ⚠️ EXEMPLO ⚠️</h5>
+<p>Contatos da aplicação</p>
+<pre class="hljs"><code><div>  {
+    <span class="hljs-attr">"id"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"nome"</span>: <span class="hljs-string">"Leanne Graham"</span>,
+    <span class="hljs-attr">"cidade"</span>: <span class="hljs-string">"Belo Horizonte"</span>,
+    <span class="hljs-attr">"categoria"</span>: <span class="hljs-string">"amigos"</span>,
+    <span class="hljs-attr">"email"</span>: <span class="hljs-string">"Sincere@april.biz"</span>,
+    <span class="hljs-attr">"telefone"</span>: <span class="hljs-string">"1-770-736-8031"</span>,
+    <span class="hljs-attr">"website"</span>: <span class="hljs-string">"hildegard.org"</span>
+  }
+  
+</div></code></pre>
+<h5 id="estrutura-de-dados---usu%C3%A1rios-%E2%9A%A0%EF%B8%8F-exemplo-%E2%9A%A0%EF%B8%8F">Estrutura de Dados - Usuários  ⚠️ EXEMPLO ⚠️</h5>
+<p>Registro dos usuários do sistema utilizados para login e para o perfil do sistema</p>
+<pre class="hljs"><code><div>  {
+    id: <span class="hljs-string">"eed55b91-45be-4f2c-81bc-7686135503f9"</span>,
+    email: <span class="hljs-string">"admin@abc.com"</span>,
+    id: <span class="hljs-string">"eed55b91-45be-4f2c-81bc-7686135503f9"</span>,
+    login: <span class="hljs-string">"admin"</span>,
+    nome: <span class="hljs-string">"Administrador do Sistema"</span>,
+    senha: <span class="hljs-string">"123"</span>
+  }
+</div></code></pre>
+<blockquote>
+<p>⚠️ <strong>APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO</strong></p>
+<p>Apresente as estruturas de dados utilizadas na solução tanto para dados utilizados na essência da aplicação quanto outras estruturas que foram criadas para algum tipo de configuração</p>
+<p>Nomeie a estrutura, coloque uma descrição sucinta e apresente um exemplo em formato JSON.</p>
+<p><strong>Orientações:</strong></p>
+<ul>
+<li><a href="https://www.w3schools.com/js/js_json_intro.asp">JSON Introduction</a></li>
+<li><a href="https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Objects/JSON">Trabalhando com JSON - Aprendendo desenvolvimento web | MDN</a></li>
+</ul>
+</blockquote>
+<h2 id="m%C3%B3dulos-e-apis">Módulos e APIs</h2>
+<p>Esta seção apresenta os módulos e APIs utilizados na solução</p>
+<p><strong>Images</strong>:</p>
+<ul>
+<li>Unsplash - <a href="https://unsplash.com/">https://unsplash.com/</a> ⚠️ EXEMPLO ⚠️</li>
+</ul>
+<p><strong>Fonts:</strong></p>
+<ul>
+<li>Icons Font Face - <a href="https://fontawesome.com/">https://fontawesome.com/</a> ⚠️ EXEMPLO ⚠️</li>
+</ul>
+<p><strong>Scripts:</strong></p>
+<ul>
+<li>jQuery - <a href="http://www.jquery.com/">http://www.jquery.com/</a> ⚠️ EXEMPLO ⚠️</li>
+<li>Bootstrap 4 - <a href="http://getbootstrap.com/">http://getbootstrap.com/</a> ⚠️ EXEMPLO ⚠️</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO</strong></p>
+<p>Apresente os módulos e APIs utilizados no desenvolvimento da solução. Inclua itens como: (1) Frameworks, bibliotecas, módulos, etc. utilizados no desenvolvimento da solução; (2) APIs utilizadas para acesso a dados, serviços, etc.</p>
+</blockquote>
+<h1 id="refer%C3%AAncias">Referências</h1>
+<p>As referências utilizadas no trabalho foram:</p>
+<ul>
+<li>SOBRENOME, Nome do autor. Título da obra. 8. ed. Cidade: Editora, 2000. 287 p ⚠️ EXEMPLO ⚠️</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO</strong></p>
+<p>Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.</p>
+<p><strong>Orientações</strong>:</p>
+<ul>
+<li><a href="https://www.normastecnicas.com/abnt/trabalhos-academicos/referencias/">Formato ABNT</a></li>
+<li><a href="https://comunidade.rockcontent.com/referencia-bibliografica-abnt/">Referências Bibliográficas da ABNT</a></li>
+</ul>
+</blockquote>
+
+</body>
+</html>
