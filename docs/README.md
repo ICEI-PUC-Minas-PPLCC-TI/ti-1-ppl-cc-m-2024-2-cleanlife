@@ -178,31 +178,26 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 | ID     | Descrição do Requisito                                   | Prioridade |
 | ------ | ---------------------------------------------------------- | ---------- |
-| RF-001 | Permitir que o usuário cadastre tarefas ⚠️ EXEMPLO ⚠️ | ALTA       |
-| RF-002 | Emitir um relatório de tarefas no mês ⚠️ EXEMPLO ⚠️ | MÉDIA     |
+| RF-001 |  O sistema deve permitir que os usuários criem uma conta com um e-mail válido, senha e opcionalmente um pseudônimo para garantir anonimato. | ALTA       |
+| RF-002 |  O sistema deve permitir que os usuários realizem login com suas credenciais e façam logout de forma segura. | ALTA     |
+| RF-003 |  O sistema deve permitir que os usuários criem novos tópicos relacionados ao tema de vícios, com título, descrição e palavras-chave. | MÉDIA     |
+| RF-004 |  O sistema deve permitir que os usuários respondam aos tópicos com comentários, possibilitando a interação e discussão sobre o tema abordado. | MÉDIA     |
+| RF-005 |  O sistema deve permitir que moderadores designados possam aprovar ou remover tópicos e comentários que infrinjam as regras do fórum. | ALTA     |
+| RF-006 |  O sistema deve permitir que os usuários denunciem conteúdo inadequado (como apologia a drogas ou uso de linguagem ofensiva) para que seja avaliado pelos moderadores.| ALTA    |
+| RF-007 | O sistema deve permitir que os usuários classifiquem os tópicos (ex: relevante, útil, etc.). | BAIXA    |
+| RF-008 | O sistema deve oferecer uma funcionalidade de busca, permitindo que os usuários localizem tópicos e discussões por palavras-chave ou categorias.| MÉDIA     |
+| RF-009 | O sistema deve permitir que os usuários visualizem e editem seus perfis, incluindo informações pessoais. | MÉDIA     |
+| RF-0010 | O sistema deve fazer uma contagem de dias sobrios para cada usuarios, e permitir que eles resetem tal contagem. | MÉDIA     |
+
 
 ### Requisitos não Funcionais
 
 | ID      | Descrição do Requisito                                                              | Prioridade |
 | ------- | ------------------------------------------------------------------------------------- | ---------- |
-| RNF-001 | O sistema deve ser responsivo para rodar em um dispositivos móvel ⚠️ EXEMPLO ⚠️ | MÉDIA     |
-| RNF-002 | Deve processar requisições do usuário em no máximo 3s ⚠️ EXEMPLO ⚠️          | BAIXA      |
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Os requisitos de um projeto são classificados em dois grupos:
->
-> - [Requisitos Funcionais (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
->   correspondem a uma funcionalidade que deve estar presente na plataforma (ex: cadastro de usuário).
-> - [Requisitos Não Funcionais (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
->   correspondem a uma característica técnica, seja de usabilidade, desempenho, confiabilidade, segurança ou outro (ex: suporte a dispositivos iOS e Android).
->
-> Lembre-se que cada requisito deve corresponder à uma e somente uma característica alvo da sua solução. Além disso, certifique-se de que todos os aspectos capturados nas Histórias de Usuário foram cobertos.
->
-> **Orientações**:
->
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
+| RNF-001 | O sistema deve ser simples de navegar, com uma interface amigável para diferentes tipos de usuários, incluindo aqueles com pouca experiência tecnológica | ALTA    |
+| RNF-002 | O sistema deve ser compatível com os navegadores mais comuns (Chrome, Firefox e Edge) e funcionar tanto em dispositivos móveis quanto em desktops.  | MÉDIA      |
+| RNF-003 | Uso do mesmo css: O design da interface deve utilizar o mesmo estilo css, para ficar linear.  | BAIXA      |
+| RNF-004 | O sistema deve implementar apenas as funcionalidades essenciais para o fórum, deixando recursos avançados para futuras iterações. | MÉDIA      |
 
 ## Projeto de Interface
 
