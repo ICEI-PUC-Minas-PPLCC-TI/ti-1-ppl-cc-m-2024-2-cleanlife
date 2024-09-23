@@ -288,7 +288,14 @@ Tela onde o usuário encontra artigos que recomendamos, e tambem pode pesquisar 
 
 # Metodologia
 
-Detalhes sobre a organização do grupo e o ferramental empregado.
+| INTEGRANTE                      | PAPEL                    | 
+| --------------------------------|--------------------------|
+| Arthur Costa Serra Negra        | Documentacao e Wireframe |
+| Bernardo Pires Mascarenhas      | Documentacao e Miro      | 
+| Enzo Piacenza Werneck da Rocha  | Miro                     | 
+| Lucas Stancioli Siqueira        | Documentacao e Miro      | 
+| Samuel Lage Spalla Fajardo      | PowerPoint               |
+|Pedro Fonseca Silva              | Miro                     |
 
 ## Ferramentas
 
