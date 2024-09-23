@@ -132,18 +132,17 @@ Esses perfis demonstram como a plataforma *CleanLife* atende a uma diversidade d
 
 ### Personas
 
-**✳️✳️✳️ APRESENTE OS DIAGRAMAS DE PERSONAS ✳️✳️✳️**
+### PERSONA 1
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Relacione as personas identificadas no seu projeto e os respectivos mapas de empatia. Lembre-se que você deve ser enumerar e descrever precisamente e de forma personalizada todos os principais envolvidos com a solução almeja.
->
-> **Orientações**:
->
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Criar personas (Hotmart)](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
+![PERSONA1](images/PERSONA1.png)
+
+### PERSONA 2
+
+![PERSONA2](images/PERSONA2.png)
+
+### PERSONA 3
+
+![PERSONA3](images/PERSONA3.png)
 
 # Product Design
 
@@ -165,15 +164,17 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 
 ## Proposta de Valor
 
-**✳️✳️✳️ APRESENTE O DIAGRAMA DA PROPOSTA DE VALOR PARA CADA PERSONA ✳️✳️✳️**
+### PROPOSTA DE VALOR PARA PERSONA 1
 
-##### Proposta para Persona XPTO ⚠️ EXEMPLO ⚠️
+![PROPOSTA1](images/PROPOSTA1.png)
 
-![Exemplo de proposta de valor](images/exemplo-proposta-valor.png)
+### PROPOSTA DE VALOR PARA PERSONA 2
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> O mapa da proposta de valor é uma ferramenta que nos ajuda a definir qual tipo de produto ou serviço melhor atende às personas definidas anteriormente.
+![PROPOSTA2](images/PROPOSTA2.png)
+
+### PROPOSTA DE VALOR PARA PERSONA 3
+
+![PROPOSTA3](images/PROPOSTA3.png)
 
 ## Requisitos
 
