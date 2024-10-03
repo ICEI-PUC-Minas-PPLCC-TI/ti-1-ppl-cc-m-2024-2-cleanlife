@@ -20,13 +20,6 @@
       "nome": "Rommel",
       "email": "rommel@gmail.com",
       "id": 3
-    },
-    {
-      "login": "sevak",
-      "senha": "1234567",
-      "nome": "gangsta",
-      "email": "tu205@gmail.com",
-      "id": 4
     }
   ]
 }
