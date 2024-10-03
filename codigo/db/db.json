@@ -5,21 +5,125 @@
       "login": "admin",
       "senha": "123",
       "nome": "Administrador do Sistema",
-      "email": "admin@abc.com"
+      "biografia": "Biografia",
+      "email": "admin@abc.com",
+      "ehADM": "1"
     },
     {
       "id": 2,
       "login": "user",
       "senha": "123",
       "nome": "Usuario Comum",
-      "email": "user@abc.com"
+      "biografia": "Biografia",
+      "email": "user@abc.com",
+      "ehADM": "0"
     },
     {
+      "id": 3,
       "login": "rommel",
       "senha": "123",
       "nome": "Rommel",
+      "biografia": "Biografia",
       "email": "rommel@gmail.com",
-      "id": 3
+      "ehADM": "0"
+    }
+  ],
+  "foruns": [
+    {
+      "id": 1,
+      "titulo": "Suporte para Vício em Drogas",
+      "descricao": "Este fórum é para discussões sobre recuperação, dicas de tratamento e apoio mútuo.",
+      "objetivo": "Objetivo",
+      "usuarioAdministrador": {
+        "id": 1,
+        "login": "Administrador do Sistema"
+      },
+      "comentarios": [
+        {
+          "id": 1,
+          "usuario": {
+            "id": 2,
+            "login": "Usuario Comum"
+          },
+          "conteudo": "Esse tópico é muito importante para a comunidade, obrigado por criá-lo!",
+          "likes": 10,
+          "comentarios": [
+            {
+              "id": 1,
+              "usuario": {
+                "id": 3,
+                "login": "Rommel"
+              },
+              "conteudo": "Concordo, é muito bom ver um espaço como esse.",
+              "likes": 5
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "usuario": {
+            "id": 3,
+            "login": "Rommel"
+          },
+          "conteudo": "Alguém tem recomendações de grupos de apoio locais?",
+          "likes": 7,
+          "comentarios": [
+            {
+              "id": 2,
+              "usuario": {
+                "id": 2,
+                "login": "Usuario Comum"
+              },
+              "conteudo": "Eu participo de um ótimo grupo aqui na minha cidade, posso te passar mais informações.",
+              "likes": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "titulo": "Técnicas de Meditação para Controle de Ansiedade",
+      "descricao": "Discussão sobre meditação e técnicas de respiração para ajudar no controle da ansiedade durante a recuperação.",
+      "objetivo": "Objetivo",
+      "usuarioAdministrador": {
+        "id": 3,
+        "login": "Rommel"
+      },
+      "comentarios": [
+        {
+          "id": 1,
+          "usuario": {
+            "id": 2,
+            "login": "Usuario Comum"
+          },
+          "conteudo": "Adoro meditação, tem sido muito útil para mim!",
+          "likes": 8,
+          "comentarios": [
+            {
+              "id": 1,
+              "usuario": {
+                "id": 3,
+                "login": "Rommel"
+              },
+              "conteudo": "Que bom que você está gostando! Qual técnica você tem usado?",
+              "likes": 6
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "artigos": [
+    {
+      "id": 1,
+      "titulo": "Maleficios do uso constante de cannabis",
+      "link": "Link",
+      "tags": [
+        "cannabis",
+        "maleficio",
+        "maconha"
+      ]
     }
   ]
 }
