@@ -82,6 +82,7 @@ function loginUser (login, senha) {
             usuarioCorrente.login = usuario.login;
             usuarioCorrente.email = usuario.email;
             usuarioCorrente.nome = usuario.nome;
+            usuarioCorrente.ehADM = usuario.ehADM;
 
             // Salva os dados do usuário corrente no Session Storage, mas antes converte para string
             sessionStorage.setItem ('usuarioCorrente', JSON.stringify (usuarioCorrente));
@@ -129,8 +130,11 @@ function addUser (nome, login, senha, email) {
 function showUserInfo (element) {
     var elemUser = document.getElementById(element);
     if (elemUser) {
-        elemUser.innerHTML = `${usuarioCorrente.nome} (${usuarioCorrente.login}) 
-                    <a onclick="logoutUser()">❌</a>`;
+        if (usuarioCorrente.ehADM == 1) {
+            elemUser.innerHTML += `<a href="" style="margin: 50px;">ADM</a>`;
+        }
+        elemUser.innerHTML += `${usuarioCorrente.nome} (${usuarioCorrente.login}) 
+        <a onclick="logoutUser()">❌</a>`;
     }
 }
 

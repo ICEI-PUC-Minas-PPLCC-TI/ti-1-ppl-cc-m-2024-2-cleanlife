@@ -7,7 +7,7 @@
       "nome": "Administrador do Sistema",
       "biografia": "Biografia",
       "email": "admin@abc.com",
-      "ehADM": "1"
+      "ehADM": 1
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "nome": "Usuario Comum",
       "biografia": "Biografia",
       "email": "user@abc.com",
-      "ehADM": "0"
+      "ehADM": 0
     },
     {
       "id": 3,
@@ -25,7 +25,7 @@
       "nome": "Rommel",
       "biografia": "Biografia",
       "email": "rommel@gmail.com",
-      "ehADM": "0"
+      "ehADM": 0
     }
   ],
   "foruns": [
