@@ -29,3 +29,16 @@ h1 {
 .btn {
     margin-top: 10px;
 }
+
+.gearIcon {
+    transition: transform 0.5s ease !important; /* Transição suave */
+    display: inline-block; /* Garante que o transform seja aplicável */
+}
+
+.rotate {
+    transform: rotate(50deg) !important; /* Rotaciona o ícone em 90 graus */
+}
+
+.margin0 {
+    margin: 0 !important;
+}
