@@ -36,7 +36,7 @@ h1 {
 }
 
 .rotate {
-    transform: rotate(50deg) !important; /* Rotaciona o ícone em 90 graus */
+    transform: rotate(90deg) !important; /* Rotaciona o ícone em 90 graus */
 }
 
 .margin0 {
