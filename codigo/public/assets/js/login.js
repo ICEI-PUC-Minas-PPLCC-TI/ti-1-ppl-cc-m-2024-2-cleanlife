@@ -161,10 +161,10 @@ function navADM() {
                                         <div class="collapse navbar-collapse" id="navbarNav1">
                                             <ul class="navbar-nav">
                                                 <li class="nav-item">
-                                                    <a class="nav-link" href="">Cadastro Artigos</a>
+                                                    <a class="nav-link" href="cadastro-artigos.html">Cadastro Artigos</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link" href="">Cadastro Clinicas</a>
+                                                    <a class="nav-link" href="cadastro-clinicas.html">Cadastro Clinicas</a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="nav-link" href="">Cadastro 3</a>
