@@ -1,1 +1,14 @@
 @import url(style.css);
+
+#counterContainer {
+    text-align: center;
+}
+
+#daysCounter {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.btn {
+    margin-top: 10px;
+}

@@ -131,47 +131,48 @@ function showUserInfo (element) {
     var elemUser = document.getElementById(element);
     if (elemUser) {
         if (usuarioCorrente.ehADM == 1) {
-            elemUser.innerHTML += `<a onclick="navADM()" style="margin: 50px;"><i class="ph-bold ph-gear-six gearIcon" style="font-size: 23px"></i></a>`;
+            elemUser.innerHTML += `<a onclick="navADM()" style="margin: 50px;"><i class="ph-bold ph-gear-six gearIcon" style="font-size: 23px"></i> </a>`;
         }
         elemUser.innerHTML += `${usuarioCorrente.nome} (${usuarioCorrente.login}) 
-        <a onclick="logoutUser()">❌</a>`;
+        <a onclick="logoutUser()"> <i class="ph-bold ph-sign-out" style="font-size: 23px"></i></a>`;
     }
 }
 
-function navADM () {
+function navADM() {
     var elemUser = document.getElementById("navBarADM");
-    var admMenu = document.getElementById("admNavMenu");
-    var NavBar = document.getElementById("NavBar");
     var gearIcon = document.querySelector(".gearIcon");
     
-    if (admMenu) {
-        // Se o menu já existe, remove-o (toggle off)
-        admMenu.remove();
+    if (elemUser.classList.contains('show')) {
+        // Se o menu já está visível, esconde-o e rotaciona o icone para a posicao inicial
+        elemUser.classList.remove('show');
         gearIcon.classList.remove('rotate');
-        NavBar.classList.remove('margin0');
     } else {
-        elemUser.innerHTML += `<nav id="admNavMenu" class="navbar navbar-expand-md navbar-light bg-light">
-                                    <a class="navbar-brand">Menu ADM</a>
-                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                        <span class="navbar-toggler-icon"></span>
-                                    </button>
-                                    <div class="collapse navbar-collapse" id="navbarNav1">
-                                        <ul class="navbar-nav">
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="">Cadastro Artigos</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="">Cadastro Clinicas</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="">Cadastro 3</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </nav>`;
-
+        // Se o menu está escondido, mostra-o
+        elemUser.classList.add('show');
         gearIcon.classList.add('rotate');
-        NavBar.classList.add('margin0');
+        
+        // Criação do menu caso ainda não tenha sido criado
+        if (!document.getElementById("admNavMenu")) {
+            elemUser.innerHTML += `<nav id="admNavMenu" class="navbar navbar-expand-md navbar-light bg-light">
+                                        <a class="navbar-brand">Menu ADM</a>
+                                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                            <span class="navbar-toggler-icon"></span>
+                                        </button>
+                                        <div class="collapse navbar-collapse" id="navbarNav1">
+                                            <ul class="navbar-nav">
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="">Cadastro Artigos</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="">Cadastro Clinicas</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="">Cadastro 3</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </nav>`;
+        }
     }
 }
 
