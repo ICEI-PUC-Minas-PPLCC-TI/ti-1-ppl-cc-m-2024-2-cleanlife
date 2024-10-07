@@ -117,13 +117,33 @@
   "artigos": [
     {
       "id": 1,
-      "titulo": "Maleficios do uso constante de cannabis",
-      "link": "Link",
-      "tags": [
-        "cannabis",
-        "maleficio",
-        "maconha"
-      ]
+      "titulo": "Maconha: qual a amplitude de seus prejuízos?",
+      "link": "https://www.scielo.br/j/rbp/a/Yg49JdvghXMvz6L6FXHgpMs/",
+      "tags": ["THC", "prejuízos", "maconha"]
+    },
+    {
+      "id": 2,
+      "titulo": "Cocaína: lendas, história e abuso",
+      "link": "https://www.scielo.br/j/rbp/a/WpZNRHsqk8sMtmWNFSyCxDz/",
+      "tags": ["Cocaína", "abuso", "saúde"]
+    },
+    {
+      "id": 3,
+      "titulo": "Síndrome de Dependência do Álcool: critérios diagnósticos",
+      "link": "https://www.scielo.br/j/rbp/a/VcfdB7HS3DYHLXs4mPXpL8M/",
+      "tags": ["dependencia", "álcool", "SDA"]
+    },
+    {
+      "id": 4,
+      "titulo": "Consenso sobre o tratamento da dependência de nicotina",
+      "link": "https://www.scielo.br/j/rbp/a/TZ7KcqWscdwF7cMYcBjKp4G/",
+      "tags": ["nicotina", "fumar", "tabaco"]
+    },
+    {
+      "id": 5,
+      "titulo": "A trajetória da dependência do crack: percepções de pessoas em tratamento",
+      "link": "https://www.scielo.br/j/reben/a/QH66hLRSgw8n9bx47szgSFC/",
+      "tags": ["crack", "droga", "dependencia"]
     }
   ]
 }
