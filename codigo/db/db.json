@@ -50,8 +50,11 @@
         "login": "user"
       },
       "conteudo": "Esse tópico é muito importante para a comunidade, obrigado por criá-lo!",
-      "likes": 10,
-      "comentario_pai_id": null
+      "likes": 1,
+      "comentario_pai_id": null,
+      "usuariosQueCurtiram": [
+        1
+      ]
     },
     {
       "id": 2,
@@ -61,8 +64,9 @@
         "login": "user"
       },
       "conteudo": "Concordo, é muito bom ver um espaço como esse.",
-      "likes": 5,
-      "comentario_pai_id": 1
+      "likes": 0,
+      "comentario_pai_id": 1,
+      "usuariosQueCurtiram": []
     },
     {
       "id": 3,
@@ -72,8 +76,11 @@
         "login": "admin"
       },
       "conteudo": "Alguém tem recomendações de grupos de apoio locais?",
-      "likes": 7,
-      "comentario_pai_id": null
+      "likes": 1,
+      "comentario_pai_id": null,
+      "usuariosQueCurtiram": [
+        1
+      ]
     },
     {
       "id": 4,
@@ -83,8 +90,9 @@
         "login": "user"
       },
       "conteudo": "Eu participo de um ótimo grupo aqui na minha cidade, posso te passar mais informações.",
-      "likes": 3,
-      "comentario_pai_id": 3
+      "likes": 0,
+      "comentario_pai_id": 3,
+      "usuariosQueCurtiram": []
     },
     {
       "id": 5,
@@ -94,8 +102,11 @@
         "login": "user"
       },
       "conteudo": "Adoro meditação, tem sido muito útil para mim!",
-      "likes": 8,
-      "comentario_pai_id": null
+      "likes": 1,
+      "comentario_pai_id": null,
+      "usuariosQueCurtiram": [
+        2
+      ]
     }
   ],
   "artigos": [

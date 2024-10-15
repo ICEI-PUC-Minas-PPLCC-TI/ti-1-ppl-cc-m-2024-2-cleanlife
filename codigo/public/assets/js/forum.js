@@ -1,5 +1,5 @@
 const urlForuns = '/foruns';
-const urlComentarios = '/comentarios'; // URL para os comentários
+const urlComentarios = '/comentarios';
 let foruns = [];
 let comentarios = [];
 
@@ -53,9 +53,15 @@ function carregaDadosForum() {
     const titulo = document.getElementById('forum-titulo');
     titulo.innerHTML = `<h2>${forum.titulo}</h2>`;
 
-    // Cria a descrição do fórum
+    // Descrição do fórum
     const descricao = document.getElementById('descricao');
-    descricao.innerHTML = `<p>${forum.descricao}</p>`;
+    descricao.innerHTML = ` <h3>Descricao:</h3>
+                            <p>${forum.descricao}</p>`;
+
+    // Objetivo do fórum
+    const objetivo = document.getElementById('objetivo');
+    objetivo.innerHTML = `  <h3>Objetivo:</h3>
+                            <p>${forum.objetivo}</p>`;
 
     // Filtra os comentários pertencentes a este fórum
     const comentariosDoForum = comentarios.filter(comentario => comentario.forum_id == forumId);
@@ -63,9 +69,19 @@ function carregaDadosForum() {
 
     comentariosDoForum.forEach(comentario => {
         if (comentario.comentario_pai_id == null) {
+            const usuarioJaCurtiu = comentario.usuariosQueCurtiram.includes(usuarioCorrente.id);
             comments.innerHTML += `<div class="comment">
-                                        <strong>${comentario.usuario.login}:</strong>
-                                        <p>${comentario.conteudo}</p>
+                                        <div class="comment-content">
+                                            <strong>${comentario.usuario.login}:</strong>
+                                            <p>${comentario.conteudo}</p>
+                                        </div>
+                                        <div class="comment-stats">
+                                            <a onclick="like(${comentario.id}, this)" style="margin: 3px;">
+                                                <i class="${usuarioJaCurtiu ? 'ph-fill' : 'ph'} ph-arrow-fat-line-up up" style="font-size: 25px"></i>
+                                            </a>
+                                            <span class="like-count-${comentario.id}">${comentario.likes}</span>
+                                            <a href="" style="margin: 15px; color: black; text-decoration: none;"><i class="ph ph-chats" style="font-size: 25px"></i></a>
+                                        </div>
                                     </div>`;
         }
     });
@@ -89,7 +105,8 @@ function carregaDadosForum() {
             },
             conteudo: comentarioInput,
             likes: 0,
-            comentario_pai_id: null
+            comentario_pai_id: null,
+            usuariosQueCurtiram: []
         };
 
         // Adiciona o novo comentário ao JSON
@@ -104,15 +121,82 @@ function carregaDadosForum() {
         .then(data => {
             console.log("Comentário adicionado com sucesso:", data);
             // Atualiza a lista de comentários na interface
+            const usuarioJaCurtiu = novoComentario.usuariosQueCurtiram.includes(usuarioCorrente.id);
             comments.innerHTML += `<div class="comment">
-                                        <strong>${novoComentario.usuario.login}:</strong>
-                                        <p>${novoComentario.conteudo}</p>
+                                        <div class="comment-content">
+                                            <strong>${novoComentario.usuario.login}:</strong>
+                                            <p>${novoComentario.conteudo}</p>
+                                        </div>
+                                        <div class="comment-stats">
+                                            <a onclick="like(${novoComentario.id}, this)" style="margin: 3px;">
+                                                <i class="${usuarioJaCurtiu ? 'ph-fill' : 'ph'} ph-arrow-fat-line-up up" style="font-size: 25px"></i>
+                                            </a>
+                                            <span class="like-count-${novoComentario.id}">${novoComentario.likes}</span>
+                                            <a href="" style="margin: 15px; color: black; text-decoration: none;"><i class="ph ph-chats" style="font-size: 25px"></i></a>
+                                        </div>
                                     </div>`;
             // Limpar o formulário
             document.getElementById("comentarioInput").value = "";
+            carregarComentarios();
         })
         .catch(error => {
             console.error("Erro ao adicionar comentário:", error);
         });
     });
 }
+
+function like(comentarioId, element) {
+    let icon = element.querySelector("i");
+    // Encontra o comentário com base no ID
+    let comentario = comentarios.find(c => c.id == comentarioId);
+    if (!comentario) {
+        console.error('Comentário não encontrado!');
+        return;
+    }
+
+    // Verifica se o campo 'usuariosQueCurtiram' existe no comentário, caso contrário inicializa como um array vazio
+    if (!comentario.usuariosQueCurtiram) {
+        comentario.usuariosQueCurtiram = [];
+    }
+
+    // Verifica se o usuário já curtiu este comentário
+    const usuarioJaCurtiu = comentario.usuariosQueCurtiram.includes(usuarioCorrente.id);
+
+    if (usuarioJaCurtiu) {
+        // Se o usuário já curtiu, remove a curtida
+        icon.classList.remove('ph-fill');
+        icon.classList.add('ph');
+        comentario.likes -= 1;
+        comentario.usuariosQueCurtiram = comentario.usuariosQueCurtiram.filter(id => id !== usuarioCorrente.id);
+        
+    } else {
+        // Se o usuário não curtiu ainda, adiciona a curtida
+        icon.classList.remove('ph');
+        icon.classList.add('ph-fill');
+        comentario.likes += 1;
+        comentario.usuariosQueCurtiram.push(usuarioCorrente.id);
+    }
+
+    // Atualiza o número de curtidas no JSON e a lista de usuários que curtiram
+    fetch(`${urlComentarios}/${comentarioId}`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ 
+            likes: comentario.likes, 
+            usuariosQueCurtiram: comentario.usuariosQueCurtiram 
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log("Likes atualizados com sucesso:", data);
+        // Atualiza o número de curtidas no DOM
+        const likeElement = document.querySelector(`.like-count-${comentarioId}`);
+        likeElement.textContent = comentario.likes;
+    })
+    .catch(error => {
+        console.error("Erro ao atualizar likes:", error);
+    });
+}
+
