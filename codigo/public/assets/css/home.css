@@ -1,1 +1,41 @@
 @import url(style.css);
+
+.conteudo {
+   display: grid;
+   grid-template-columns: 3fr 1fr;
+   width: 100%;
+}
+
+.forum {
+   max-height: 250px;
+   background-color: #D9D9D9;
+   padding: 15px;
+   border-radius: 20px;
+   margin-bottom: 15px;
+}
+
+.foruns {
+   display: grid;
+   grid-template-columns: 2fr 2fr;
+   gap: 20px;
+   padding: 15px;
+}
+
+.foruns a {
+   text-decoration: none !important;
+   color: black;
+}
+
+.foruns a:hover{
+   color: black;
+}
+
+
+.btn {
+   background-color: #928484 !important;
+   border-color: #928484 !important;
+}
+
+.lateral {
+   padding: 15px;
+}
