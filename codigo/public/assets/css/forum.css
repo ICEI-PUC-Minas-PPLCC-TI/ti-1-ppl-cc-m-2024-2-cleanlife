@@ -28,6 +28,26 @@
     border-radius: 20px;
 }
 
+.comment-content p {
+    margin-bottom: 0px;
+}
+
+
+
+#descricao p {
+    margin-bottom: 15px;
+    background-color: #D9D9D9;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#objetivo p {
+    margin-bottom: 15px;
+    background-color: #D9D9D9;
+    padding: 15px;
+    border-radius: 10px;
+}
+
 h3 {
     font-size: 25px !important;
 }
@@ -38,6 +58,7 @@ h3 {
     height: 2em;
     line-height: 0.8;
     margin-right: 20px;
+    justify-content: end;
 }
 
 .comment-stats i {
@@ -47,6 +68,20 @@ h3 {
 .btn {
     background-color: #928484 !important;
     border-color: #928484 !important;
+}
+
+.comment-comments {
+    opacity: 0;
+    transform: translateY(-10px); /* O menu começa um pouco acima */
+    transition: opacity 0.2s ease, transform 0.5s ease, max-height 0.5s ease; /* Transições suaves para a opacidade e a posição e altura */
+    max-height: 0;
+    overflow: hidden;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0); /* Menu desliza para a posição original */
+    max-height: 500px; /* Define um valor que seja maior que o necessário para o conteúdo */
 }
 
 @media (max-width: 768px) {
