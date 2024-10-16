@@ -7,11 +7,12 @@
 }
 
 .forum {
-   max-height: 250px;
+   height: 250px;
    background-color: #D9D9D9;
    padding: 15px;
    border-radius: 20px;
    margin-bottom: 15px;
+   width: 650px;
 }
 
 .foruns {
@@ -38,4 +39,29 @@
 
 .lateral {
    padding: 15px;
+}
+
+.buscar {
+   margin-left: 10px;
+   font-size: 25px;
+   margin-top: 10px;
+}
+
+.header-buscar {
+   margin-left: 18px;
+   display: flex;
+   align-items: center;
+   height: 2em;
+   line-height: 0.9;
+   margin-right: 20px;
+   background-color: #D9D9D9;
+   padding: 15px;
+   border-radius: 10px;
+   width: 140px;
+   margin-top: 10px;  
+}
+
+.header-buscar i {
+   vertical-align: middle;
+   font-size: 20px;
 }

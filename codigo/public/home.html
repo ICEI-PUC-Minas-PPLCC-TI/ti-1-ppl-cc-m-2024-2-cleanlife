@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fórum</title>
+    <title>Home</title>
     <link rel="stylesheet" href="./assets/css/home.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <script src="./assets/js/login.js"></script>
@@ -43,7 +43,12 @@
     <header id="navBarADM">
 
     </header>
-    <h2 class="Buscar">Buscar</h2>
+    
+    <div class="header-buscar">
+        <h2 class="buscar">Buscar</h2>
+        <i class="ph ph-magnifying-glass buscar"></i>
+    </div>
+    
     
     <div class="conteudo">
         <div id="foruns" class="foruns"> 
@@ -60,17 +65,17 @@
                 
                 <h5>Título:</h5>
                 <div class="form-group">
-                    <textarea id="tituloInput" class="form-control" rows="1" placeholder="Escreva aqui..."></textarea>
+                    <textarea id="tituloInput" class="form-control" rows="1" maxlength="78" placeholder="Escreva aqui..."></textarea>
                 </div>
                 
                 <h5>Descrição:</h5>
                 <div class="form-group">
-                    <textarea id="descricaoInput" class="form-control" rows="3" placeholder="Escreva aqui..."></textarea>
+                    <textarea id="descricaoInput" class="form-control" rows="3" maxlength="150" placeholder="Escreva aqui..."></textarea>
                 </div>
                 
                 <h5>Objetivo:</h5>
                 <div class="form-group">
-                    <textarea id="objetivoInput" class="form-control" rows="3" placeholder="Escreva aqui..."></textarea>
+                    <textarea id="objetivoInput" class="form-control" rows="3" maxlength="150" placeholder="Escreva aqui..."></textarea>
                 </div>
                 
                 <button type="submit" class="btn btn-primary">Criar Novo Fórum</button>
