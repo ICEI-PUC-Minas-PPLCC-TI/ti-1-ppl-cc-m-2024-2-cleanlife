@@ -11,6 +11,12 @@
     padding: 20px;
 }
 
+.titulo {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    line-height: 1.5;
+}
+
 .conteudo {
     padding: 20px; /* Espaçamento interno */
     grid-area: coluna1;
@@ -31,8 +37,6 @@
 .comment-content p {
     margin-bottom: 0px;
 }
-
-
 
 #descricao p {
     margin-bottom: 15px;
@@ -78,10 +82,54 @@ h3 {
     overflow: hidden;
 }
 
-.show {
+.show1 {
     opacity: 1;
     transform: translateY(0); /* Menu desliza para a posição original */
     max-height: 500px; /* Define um valor que seja maior que o necessário para o conteúdo */
+}
+
+.editar {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    justify-content: end;
+    font-size: 35px;
+}
+
+.btn2 {
+    font-size: 35px;
+    color: black;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.btn2:hover {
+    color: black;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.ModalTopicos {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+    background-color: #D9D9D9;
+    padding: 15px;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.ModalTopicos button{
+    height: 40px;
+}
+
+.ModalTopicos label{
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    width: fit-content;
+    /*justify-self: center;*/
 }
 
 @media (max-width: 768px) {

@@ -51,7 +51,125 @@ function carregaDadosForum() {
 
     // Título do fórum
     const titulo = document.getElementById('forum-titulo');
-    titulo.innerHTML = `<h2>${forum.titulo}</h2>`;
+    if(forum.usuarioAdministrador.id == usuarioCorrente.id) {
+        titulo.innerHTML = `<div class="titulo">
+                                <h2>${forum.titulo}</h2>
+                                <div class="editar">
+                                    <button type="button" class="btn2" data-toggle="modal" data-target="#exampleModal">
+                                        <i class="ph-bold ph-note-pencil"></i>
+                                    </button>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Editar Fórum</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="ModalTopicos">
+                                                    <label for="novo-titulo" class="col-form-label" style="font-size:20px;">${forum.titulo}</label>
+                                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editTituloModal" data-whatever="@mdo">Editar</button>
+                                                </div>
+                                                <div class="ModalTopicos">
+                                                    <label for="nova-descricao" class="col-form-label" style="font-size:20px;">${forum.descricao}</label>
+                                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editDescricaoModal" data-whatever="@fat">Editar</button>
+                                                </div>
+                                                <div class="ModalTopicos">
+                                                    <label for="novo-objetivo" class="col-form-label" style="font-size:20px;">${forum.objetivo}</label>
+                                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editObjetivoModal" data-whatever="@getbootstrap">Editar</button>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Modal for Editing Título -->
+                                    <div class="modal fade" id="editTituloModal" tabindex="-1" role="dialog" aria-labelledby="editTituloLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="editTituloLabel">Editar Título</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" id="new-titulo" placeholder="Digite o novo título">
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                                    <button type="button" class="btn btn-primary">Confirmar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Modal for Editing Descrição -->
+                                    <div class="modal fade" id="editDescricaoModal" tabindex="-1" role="dialog" aria-labelledby="editDescricaoLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="editDescricaoLabel">Editar Descrição</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" id="new-descricao" placeholder="Digite a nova descrição">
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                                    <button type="button" class="btn btn-primary">Confirmar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Modal for Editing Objetivo -->
+                                    <div class="modal fade" id="editObjetivoModal" tabindex="-1" role="dialog" aria-labelledby="editObjetivoLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="editObjetivoLabel">Editar Objetivo</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" id="new-objetivo" placeholder="Digite o novo objetivo">
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                                    <button type="button" class="btn btn-primary">Confirmar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>`;
+    }else{
+        titulo.innerHTML = `<h2>${forum.titulo}</h2>`;
+    }
 
     // Descrição do fórum
     const descricao = document.getElementById('descricao');
@@ -216,14 +334,14 @@ function comments(comentarioPaiId, element) {
     let params = new URLSearchParams(location.search);
     let forumId = params.get('id'); // Extrai o ID do fórum dos parâmetros da URL
     
-    if (comments.classList.contains('show')) {
+    if (comments.classList.contains('show1')) {
         // Se o menu já está visível, esconde-o
-        comments.classList.remove('show');
+        comments.classList.remove('show1');
         icon.classList.remove('ph-fill');
         icon.classList.add('ph');
     } else {
         // Se o menu está escondido, mostra-o
-        comments.classList.add('show');
+        comments.classList.add('show1');
         icon.classList.remove('ph');
         icon.classList.add('ph-fill');
         
@@ -250,7 +368,7 @@ function comments(comentarioPaiId, element) {
                                                 <p>${comentario.conteudo}</p>
                                             </div>
                                             <div class="comment-stats">
-                                                <a onclick="like(${comentario.id}, this)" style="margin: 3px;">
+                                                <a onclick="like2(${comentario.id}, this)" style="margin: 3px;">
                                                     <i class="${usuarioJaCurtiu ? 'ph-fill' : 'ph'} ph-arrow-fat-line-up up" style="font-size: 25px"></i>
                                                 </a>
                                                 <span class="like-count-${comentario.id}">${comentario.likes}</span>
@@ -301,7 +419,7 @@ function comments(comentarioPaiId, element) {
                                                 <p>${novoComentario.conteudo}</p>
                                             </div>
                                             <div class="comment-stats">
-                                                <a onclick="like(${novoComentario.id}, this)" style="margin: 3px;">
+                                                <a onclick="like2(${novoComentario.id}, this)" style="margin: 3px;">
                                                     <i class="${usuarioJaCurtiu ? 'ph-fill' : 'ph'} ph-arrow-fat-line-up up" style="font-size: 25px"></i>
                                                 </a>
                                                 <span class="like-count-${novoComentario.id}">${novoComentario.likes}</span>
@@ -316,4 +434,107 @@ function comments(comentarioPaiId, element) {
             });
         });
     }
+}
+
+function like2(comentarioId, element) {
+    let icon = element.querySelector("i");
+    // Encontra o comentário com base no ID
+    let comentario = comentarios.find(c => c.id == comentarioId);
+    if (!comentario) {
+        console.error('Comentário não encontrado!');
+        return;
+    }
+
+    // Verifica se o campo 'usuariosQueCurtiram' existe no comentário, caso contrário inicializa como um array vazio
+    if (!comentario.usuariosQueCurtiram) {
+        comentario.usuariosQueCurtiram = [];
+    }
+
+    // Verifica se o usuário já curtiu este comentário
+    const usuarioJaCurtiu = comentario.usuariosQueCurtiram.includes(usuarioCorrente.id);
+
+    if (usuarioJaCurtiu) {
+        // Se o usuário já curtiu, remove a curtida
+        icon.classList.remove('ph-fill');
+        icon.classList.add('ph');
+        comentario.likes -= 1;
+        comentario.usuariosQueCurtiram = comentario.usuariosQueCurtiram.filter(id => id !== usuarioCorrente.id);
+        
+    } else {
+        // Se o usuário não curtiu ainda, adiciona a curtida
+        icon.classList.remove('ph');
+        icon.classList.add('ph-fill');
+        comentario.likes += 1;
+        comentario.usuariosQueCurtiram.push(usuarioCorrente.id);
+    }
+
+    // Atualiza o número de curtidas no JSON e a lista de usuários que curtiram
+    fetch(`${urlComentarios}/${comentarioId}`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ 
+            likes: comentario.likes, 
+            usuariosQueCurtiram: comentario.usuariosQueCurtiram 
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log("Likes atualizados com sucesso:", data);
+        // Atualiza o número de curtidas no DOM
+        const likeElement = document.querySelector(`.like-count-${comentarioId}`);
+        likeElement.textContent = comentario.likes;
+
+        // Chama a função para reordenar os comentários
+        reordenarComentarios(comentario.comentario_pai_id);
+    })
+    .catch(error => {
+        console.error("Erro ao atualizar likes:", error);
+    });
+}
+
+function reordenarComentarios(comentarioPaiId) {
+    // Filtra os comentários relacionados ao comentário pai
+    const comentariosDoPai = comentarios.filter(comentario => comentario.comentario_pai_id == comentarioPaiId);
+    
+    // Ordena os comentários com base na quantidade de likes
+    comentariosDoPai.sort((a, b) => b.likes - a.likes);
+    
+    // Atualiza a exibição no DOM
+    const commentsContainer = document.getElementById(`comment-comments-${comentarioPaiId}`);
+    const novoComentarioForm = document.getElementById(`comments-${comentarioPaiId}`);
+    
+    // Limpa os comentários atuais
+    commentsContainer.innerHTML = '';
+    if (novoComentarioForm) {
+        commentsContainer.appendChild(novoComentarioForm);
+    } else {
+        commentsContainer.innerHTML += `<div id="comments-${comentarioPaiId}" style="margin-bottom: 35px;">
+                                            <form id="novoComentarioComentario" class="mt-3">
+                                                <h5>Deixe sua resposta:</h5>
+                                                <div class="form-group">
+                                                    <textarea id="ComentarioComentarioInput" class="form-control" rows="1" placeholder="Escreva aqui..."></textarea>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Enviar</button>
+                                            </form>
+                                        </div>`;
+    }
+    
+    // Adiciona os comentários reordenados no DOM
+    comentariosDoPai.forEach(comentario => {
+        const usuarioJaCurtiu = comentario.usuariosQueCurtiram.includes(usuarioCorrente.id);
+        commentsContainer.innerHTML += `<div class="comment-comment">
+                                            <div class="comment-content">
+                                                <strong style="font-size: 18px;">@${comentario.usuario.login}:</strong>
+                                                <p>${comentario.conteudo}</p>
+                                            </div>
+                                            <div class="comment-stats">
+                                                <a onclick="like2(${comentario.id}, this)" style="margin: 3px;">
+                                                    <i class="${usuarioJaCurtiu ? 'ph-fill' : 'ph'} ph-arrow-fat-line-up up" style="font-size: 25px"></i>
+                                                </a>
+                                                <span class="like-count-${comentario.id}">${comentario.likes}</span>
+                                            </div>
+                                        </div>`;
+    });
 }
