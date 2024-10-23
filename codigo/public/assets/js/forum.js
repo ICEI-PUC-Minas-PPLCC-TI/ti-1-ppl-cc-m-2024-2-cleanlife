@@ -51,135 +51,137 @@ function carregaDadosForum() {
 
     // Título do fórum
     const titulo = document.getElementById('forum-titulo');
-    if(forum.usuarioAdministrador.id == usuarioCorrente.id) {
-        titulo.innerHTML = `<div class="titulo">
-                                <h2>${forum.titulo}</h2>
-                                <div class="editar">
-                                    <button type="button" class="btn2" data-toggle="modal" data-target="#exampleModal">
-                                        <i class="ph-bold ph-note-pencil"></i>
-                                    </button>
-
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Editar Fórum</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="ModalTopicos">
-                                                    <label for="novo-titulo" class="col-form-label" style="font-size:20px;">${forum.titulo}</label>
-                                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editTituloModal" data-whatever="@mdo">Editar</button>
-                                                </div>
-                                                <div class="ModalTopicos">
-                                                    <label for="nova-descricao" class="col-form-label" style="font-size:20px;">${forum.descricao}</label>
-                                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editDescricaoModal" data-whatever="@fat">Editar</button>
-                                                </div>
-                                                <div class="ModalTopicos">
-                                                    <label for="novo-objetivo" class="col-form-label" style="font-size:20px;">${forum.objetivo}</label>
-                                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editObjetivoModal" data-whatever="@getbootstrap">Editar</button>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                                            </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Modal for Editing Título -->
-                                    <div class="modal fade" id="editTituloModal" tabindex="-1" role="dialog" aria-labelledby="editTituloLabel" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="editTituloLabel">Editar Título</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <form>
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-control" id="new-titulo" placeholder="Digite o novo título">
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                                    <button type="button" class="btn btn-primary">Confirmar</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Modal for Editing Descrição -->
-                                    <div class="modal fade" id="editDescricaoModal" tabindex="-1" role="dialog" aria-labelledby="editDescricaoLabel" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="editDescricaoLabel">Editar Descrição</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <form>
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-control" id="new-descricao" placeholder="Digite a nova descrição">
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                                    <button type="button" class="btn btn-primary">Confirmar</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Modal for Editing Objetivo -->
-                                    <div class="modal fade" id="editObjetivoModal" tabindex="-1" role="dialog" aria-labelledby="editObjetivoLabel" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="editObjetivoLabel">Editar Objetivo</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <form>
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-control" id="new-objetivo" placeholder="Digite o novo objetivo">
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                                    <button type="button" class="btn btn-primary">Confirmar</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>`;
-    }else{
-        titulo.innerHTML = `<h2>${forum.titulo}</h2>`;
-    }
-
+    titulo.innerText = forum.titulo;
+    
     // Descrição do fórum
     const descricao = document.getElementById('descricao');
     descricao.innerHTML = ` <h3>Descricao:</h3>
-                            <p>${forum.descricao}</p>`;
+                            <p id="descricao-no-forum" >${forum.descricao}</p>`;
 
     // Objetivo do fórum
     const objetivo = document.getElementById('objetivo');
     objetivo.innerHTML = `  <h3>Objetivo:</h3>
-                            <p>${forum.objetivo}</p>`;
+                            <p id="objetivo-no-forum" >${forum.objetivo}</p>`;
+
+    const editar = document.getElementById('editar');
+    if(forum.usuarioAdministrador.id == usuarioCorrente.id) {
+        editar.classList.remove('hide');
+        const titulomodal = document.getElementById('titulo-modal');
+        const descricaomodal = document.getElementById('descricao-modal');
+        const objetivomodal = document.getElementById('objetivo-modal');
+        titulomodal.innerText = forum.titulo;
+        descricaomodal.innerText = forum.descricao;
+        objetivomodal.innerText = forum.objetivo;
+        document.getElementById('new-titulo').value = forum.titulo;
+        document.getElementById('new-descricao').value = forum.descricao;
+        document.getElementById('new-objetivo').value = forum.objetivo;
+        document.getElementById('confirmar-edicao-titulo').addEventListener('click', function() {
+            // Pegar o valor do campo de input
+            const novoTitulo = document.getElementById('new-titulo').value;
+            if (novoTitulo.trim() === "") {
+                alert("O título não pode estar vazio!");
+                return;
+            }
+    
+            // Atualizar o título fora do modal
+            if (titulo) {
+                titulo.innerText = novoTitulo;
+                titulomodal.innerText = novoTitulo;
+            }
+    
+            // Fechar o modal
+            $('#editTituloModal').modal('hide');
+            
+            // Atualizar no servidor usando uma requisição PATCH
+            fetch(`${urlForuns}/${forum.id}`, {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ titulo: novoTitulo })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Título atualizado com sucesso no servidor:", data);
+                console.log('Novo título:', novoTitulo);
+            })
+            .catch(error => {
+                console.error("Erro ao atualizar o título no servidor:", error);
+            });
+        });
+        document.getElementById('confirmar-edicao-descricao').addEventListener('click', function() {
+            // Pegar o valor do campo de input
+            const novaDescricao = document.getElementById('new-descricao').value;
+            if (novaDescricao.trim() === "") {
+                alert("A descricao não pode estar vazia!");
+                return;
+            }
+            
+            const descricaoforum = document.getElementById('descricao-no-forum');
+
+            // Atualizar a descricao fora do modal
+            if (descricaoforum) {
+                descricaoforum.innerText = novaDescricao;
+                descricaomodal.innerText = novaDescricao;
+            }
+    
+            // Fechar o modal
+            $('#editDescricaoModal').modal('hide');
+            
+            // Atualizar no servidor usando uma requisição PATCH
+            fetch(`${urlForuns}/${forum.id}`, {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ descricao: novaDescricao })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Descricao atualizada com sucesso no servidor:", data);
+                console.log('Nova descricao:', novaDescricao);
+            })
+            .catch(error => {
+                console.error("Erro ao atualizar a descricao no servidor:", error);
+            });
+        });
+        document.getElementById('confirmar-edicao-objetivo').addEventListener('click', function() {
+            // Pegar o valor do campo de input
+            const novoObjetivo = document.getElementById('new-objetivo').value;
+            if (novoObjetivo.trim() === "") {
+                alert("O Objetivo não pode estar vazio!");
+                return;
+            }
+            
+            const objetivoforum = document.getElementById('objetivo-no-forum');
+
+            // Exemplo: Atualizar a descricao de um elemento fora do modal
+            if (objetivoforum) {
+                objetivoforum.innerText = novoObjetivo;
+                objetivomodal.innerText = novoObjetivo;
+            }
+    
+            // Fechar o modal
+            $('#editObjetivoModal').modal('hide');
+            
+            // Atualizar no servidor usando uma requisição PATCH
+            fetch(`${urlForuns}/${forum.id}`, {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ objetivo: novoObjetivo })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Objetivo atualizado com sucesso no servidor:", data);
+                console.log('Novo objetivo:', novoObjetivo);
+            })
+            .catch(error => {
+                console.error("Erro ao atualizar o objetivo no servidor:", error);
+            });
+        });
+    }
 
     // Filtra os comentários pertencentes a este fórum
     const comentariosDoForum = comentarios.filter(comentario => comentario.forum_id == forumId);
@@ -336,15 +338,11 @@ function comments(comentarioPaiId, element) {
     
     if (comments.classList.contains('show1')) {
         // Se o menu já está visível, esconde-o
+        comments.style.maxHeight = '0';
         comments.classList.remove('show1');
         icon.classList.remove('ph-fill');
         icon.classList.add('ph');
     } else {
-        // Se o menu está escondido, mostra-o
-        comments.classList.add('show1');
-        icon.classList.remove('ph');
-        icon.classList.add('ph-fill');
-        
         // Criação dos comentários caso ainda não tenham sido criados
         if (!document.getElementById(`comments-${comentarioPaiId}`)) {
             comments.innerHTML += ` <div id="comments-${comentarioPaiId}" style="margin-bottom: 35px;">
@@ -419,7 +417,7 @@ function comments(comentarioPaiId, element) {
                                                 <p>${novoComentario.conteudo}</p>
                                             </div>
                                             <div class="comment-stats">
-                                                <a onclick="like2(${novoComentario.id}, this)" style="margin: 3px;">
+                                                <a onclick="like2(${novoComentario.id}, this, ${forumId})" style="margin: 3px;">
                                                     <i class="${usuarioJaCurtiu ? 'ph-fill' : 'ph'} ph-arrow-fat-line-up up" style="font-size: 25px"></i>
                                                 </a>
                                                 <span class="like-count-${novoComentario.id}">${novoComentario.likes}</span>
@@ -427,16 +425,24 @@ function comments(comentarioPaiId, element) {
                                         </div>`;
                 // Limpar o formulário
                 document.getElementById("comentarioInput").value = "";
+                const contentHeight = comments.scrollHeight + 'px';
+                comments.style.maxHeight = contentHeight;
                 carregarComentarios();
             })
             .catch(error => {
                 console.error("Erro ao adicionar comentário:", error);
             });
         });
+        // Se o menu está escondido, mostra-o
+        const contentHeight = comments.scrollHeight + 'px';
+        comments.style.maxHeight = contentHeight;
+        comments.classList.add('show1');
+        icon.classList.remove('ph');
+        icon.classList.add('ph-fill');
     }
 }
 
-function like2(comentarioId, element) {
+function like2(comentarioId, element, forumId) {
     let icon = element.querySelector("i");
     // Encontra o comentário com base no ID
     let comentario = comentarios.find(c => c.id == comentarioId);
@@ -487,14 +493,14 @@ function like2(comentarioId, element) {
         likeElement.textContent = comentario.likes;
 
         // Chama a função para reordenar os comentários
-        reordenarComentarios(comentario.comentario_pai_id);
+        reordenarComentarios(comentario.comentario_pai_id, forumId);
     })
     .catch(error => {
         console.error("Erro ao atualizar likes:", error);
     });
 }
 
-function reordenarComentarios(comentarioPaiId) {
+function reordenarComentarios(comentarioPaiId, forumId) {
     // Filtra os comentários relacionados ao comentário pai
     const comentariosDoPai = comentarios.filter(comentario => comentario.comentario_pai_id == comentarioPaiId);
     
@@ -503,24 +509,19 @@ function reordenarComentarios(comentarioPaiId) {
     
     // Atualiza a exibição no DOM
     const commentsContainer = document.getElementById(`comment-comments-${comentarioPaiId}`);
-    const novoComentarioForm = document.getElementById(`comments-${comentarioPaiId}`);
     
     // Limpa os comentários atuais
     commentsContainer.innerHTML = '';
-    if (novoComentarioForm) {
-        commentsContainer.appendChild(novoComentarioForm);
-    } else {
-        commentsContainer.innerHTML += `<div id="comments-${comentarioPaiId}" style="margin-bottom: 35px;">
-                                            <form id="novoComentarioComentario" class="mt-3">
-                                                <h5>Deixe sua resposta:</h5>
-                                                <div class="form-group">
-                                                    <textarea id="ComentarioComentarioInput" class="form-control" rows="1" placeholder="Escreva aqui..."></textarea>
-                                                </div>
-                                                <button type="submit" class="btn btn-primary">Enviar</button>
+    commentsContainer.innerHTML += `<div id="comments-${comentarioPaiId}" style="margin-bottom: 35px;">
+                                        <form id="novoComentarioComentario1" class="mt-3">
+                                            <h5>Deixe sua resposta:</h5>
+                                            <div class="form-group">
+                                                <textarea id="ComentarioComentarioInput" class="form-control" rows="1" placeholder="Escreva aqui..."></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Enviar</button>
                                             </form>
-                                        </div>`;
-    }
-    
+                                            </div>`;
+                                            
     // Adiciona os comentários reordenados no DOM
     comentariosDoPai.forEach(comentario => {
         const usuarioJaCurtiu = comentario.usuariosQueCurtiram.includes(usuarioCorrente.id);
@@ -536,5 +537,64 @@ function reordenarComentarios(comentarioPaiId) {
                                                 <span class="like-count-${comentario.id}">${comentario.likes}</span>
                                             </div>
                                         </div>`;
+    });
+
+    // Campo para adicionar novo comentário
+    document.getElementById("novoComentarioComentario1").addEventListener("submit", function (event) {
+        event.preventDefault(); // Impede o comportamento padrão de envio do formulário
+
+        let comentarioInput = document.getElementById("ComentarioComentarioInput").value;
+        if (comentarioInput.trim() === "") {
+            alert("Por favor, escreva um comentário antes de enviar.");
+            return;
+        }
+
+        let novoComentario = {
+            id: comentarios.length > 0 ? Math.max(...comentarios.map(c => c.id)) + 1 : 1, // Garante um novo ID único
+            forum_id: forumId,
+            usuario: {
+                id: usuarioCorrente.id,
+                login: usuarioCorrente.login
+            },
+            conteudo: comentarioInput,
+            likes: 0,
+            comentario_pai_id: comentarioPaiId,
+            usuariosQueCurtiram: []
+        };
+
+        // Adiciona o novo comentário ao JSON
+        fetch(urlComentarios, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(novoComentario)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log("Comentário adicionado com sucesso:", data);
+            // Atualiza a lista de comentários na interface
+            const usuarioJaCurtiu = novoComentario.usuariosQueCurtiram.includes(usuarioCorrente.id);
+            commentsContainer.innerHTML += `<div class="comment-comment">
+                                                <div class="comment-content">
+                                                    <strong style="font-size: 18px;">@${novoComentario.usuario.login}:</strong>
+                                                    <p>${novoComentario.conteudo}</p>
+                                                </div>
+                                                <div class="comment-stats">
+                                                    <a onclick="like2(${novoComentario.id}, this)" style="margin: 3px;">
+                                                        <i class="${usuarioJaCurtiu ? 'ph-fill' : 'ph'} ph-arrow-fat-line-up up" style="font-size: 25px"></i>
+                                                    </a>
+                                                    <span class="like-count-${novoComentario.id}">${novoComentario.likes}</span>
+                                                </div>
+                                            </div>`;
+            // Limpar o formulário
+            document.getElementById("comentarioInput").value = "";
+            const contentHeight = commentsContainer.scrollHeight + 'px';
+            commentsContainer.style.maxHeight = contentHeight;
+            carregarComentarios();
+        })
+        .catch(error => {
+            console.error("Erro ao adicionar comentário:", error);
+        });
     });
 }

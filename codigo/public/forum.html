@@ -44,8 +44,129 @@
 
     </header>
     <div class="content">
-        <div id="forum-titulo">
+        <div id="forum-header">
             <!-- O titulo do fórum sera carregado aqui -->
+                <h2 id="forum-titulo"></h2>
+                <div id="editar" class="editar hide">
+                    <button type="button" class="btn2" data-toggle="modal" data-target="#exampleModal">
+                        <i class="ph-bold ph-note-pencil"></i>
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Editar Fórum</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <h2 style="font-size: 25px;">Título:</h2>
+                                <div class="ModalTopicos">
+                                    <label id="titulo-modal" for="novo-titulo" class="col-form-label" style="font-size:20px;">
+
+                                    </label>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editTituloModal" data-whatever="@mdo">Editar</button>
+                                </div>
+                                <h2 style="font-size: 25px;">Descrição:</h2>
+                                <div class="ModalTopicos">
+                                    <label id="descricao-modal" for="nova-descricao" class="col-form-label" style="font-size:20px;">
+
+                                    </label>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editDescricaoModal" data-whatever="@fat">Editar</button>
+                                </div>
+                                <h2 style="font-size: 25px;">Objetivo:</h2>
+                                <div class="ModalTopicos">
+                                    <label id="objetivo-modal" for="novo-objetivo" class="col-form-label" style="font-size:20px;">
+
+                                    </label>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editObjetivoModal" data-whatever="@getbootstrap">Editar</button>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal for Editing Título -->
+                    <div class="modal fade" id="editTituloModal" tabindex="-1" role="dialog" aria-labelledby="editTituloLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="editTituloLabel">Editar Título</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="new-titulo" placeholder="Digite o novo título">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-primary" id="confirmar-edicao-titulo">Confirmar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal for Editing Descrição -->
+                    <div class="modal fade" id="editDescricaoModal" tabindex="-1" role="dialog" aria-labelledby="editDescricaoLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="editDescricaoLabel">Editar Descrição</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="new-descricao" placeholder="Digite a nova descrição">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-primary" id="confirmar-edicao-descricao">Confirmar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal for Editing Objetivo -->
+                    <div class="modal fade" id="editObjetivoModal" tabindex="-1" role="dialog" aria-labelledby="editObjetivoLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="editObjetivoLabel">Editar Objetivo</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="new-objetivo" placeholder="Digite o novo objetivo">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-primary" id="confirmar-edicao-objetivo">Confirmar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </div>
         <div id="forum-container" class="forum-container">
             <div class="conteudo">
