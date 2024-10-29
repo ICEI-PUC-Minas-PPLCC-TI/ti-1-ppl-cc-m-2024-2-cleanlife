@@ -44,8 +44,8 @@
 
     </header>
     <div class="container mt-4">
-        <body onload="init()">
-            <h1>Cadastro de Clinicas (CRUD)</h1>
+        <body>
+            <h1>Listagem de Clinicas</h1>
         
             <div class="container">
                 <div class="row">
@@ -54,62 +54,27 @@
                     </div>
                 </div>
         
-                <form id="form-clinica">
+                <div class="row">
+                    <div id="msg" class="col-sm-2 offset-sm-10 ">
+                        <a href="cadastro-clinicas.html"><input type="button" class="btn btn-warning" id="btnClear" value="Cadastro"></a>
+                    </div>
+                </div>        
+        
+                <form id="form-clinica">            
                     <div class="form-group row">
                         <div class="col-sm-4">
-                            <label for="inputId">Id</label>
-                            <input type="text" class="form-control" id="inputId" placeholder="ID" disabled>
-                        </div>
-                        <div class="col-sm-8">
-                            <label for="inputNome">Nome (*)</label>
-                            <input type="text" class="form-control" id="inputNome" required placeholder="Informe o nome da clinica">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-5">
-                            <label for="inputEndereco">Endereço (*)</label>
-                            <input type="text" class="form-control" id="inputEndereco" required placeholder="Endereço">
-                        </div>
-                        <div class="col-sm-7">
-                            <label for="inputCidade">Cidade (*)</label>
-                            <input type="text" class="form-control" id="inputCidade" required placeholder="Informe a cidade">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-6">
-                            <label for="inputLat">Lat (*)</label>
-                            <input type="text" class="form-control" id="inputLat" required placeholder="Informe a latitude da clinica" >
-                        </div>
-                        <div class="col-sm-6">
-                            <label for="inputLong">Long (*)</label>
-                            <input type="text" class="form-control" id="inputLong" required placeholder="Informe a longitude da clinica">
-                        </div>
-                    </div>
-                    <div class="form-group row">    
-                        <div class="col-sm-6">
-                            <label for="inputCor">Cor (Ingles)</label>
-                            <input type="text" class="form-control" id="inputCor" placeholder="Cor">
-                        </div>
-                        <div class="col-sm-6">
-                            <label for="inputSite">Site (*)</label>
-                            <input type="text" class="form-control" id="inputSite" required placeholder="Web Site">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-4">
-                            <small>(*) Campos obrigatórios</small>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-12">
-                            <input type="button" class="btn btn-success" id="btnInsert" value="Inserir">
-                            <input type="button" class="btn btn-warning" id="btnUpdate" value="Alterar">
-                            <input type="button" class="btn btn-danger" id="btnDelete" value="Excluir">
-                            <input type="button" class="btn btn-secondary" id="btnClear" value="Limpar Form">
-                            <a href="searchClinicas.html"><input type="button" class="btn btn-warning" id="btnClear" value="Pesquisar Clinicas"></a>
+                            <select name="filtro_cidade" id="filtro_cidade" onchange="ListaClinicas()" class="form-control">
+                                <option value="">Selecione a Cidade</option>
+                                <option value="Betim">Betim</option>
+                                <option value="Belo Horizonte">Belo Horizonte</option>
+                                <option value="Rio de Janeiro">Rio de Janeiro</option>
+                                <option value="São Paulo">São Paulo</option>
+                                <option value="Goiânia">Goiânia</option>
+                            </select>                    
                         </div>
                     </div>
                 </form>
+        
         
                 <div class="row">
                     <div class="col-sm-12">
@@ -126,15 +91,6 @@
                                 </tr>
                             </thead>
                             <tbody id="table-clinicas">
-                                <tr>
-                                    <td scope="row">1</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -142,6 +98,46 @@
             </div>
         
             <script src="./assets/js/cadastroClinicas.js"></script>
+            <script>
+                // carrega os dados a partir da API JSONServer
+                var db = []
+                readClinica(dados => {
+                    db = dados;
+                    ListaClinicas()
+                });
+        
+                // função para listar na tabela as clinicas que estão associados aos filtros 
+                function ListaClinicas() {
+        
+                    // Obtem os dados informados pelo usuário nos filtros
+                    let fc = document.getElementById('filtro_cidade').value;
+        
+                    // limpa a lista de clinicas apresentados
+                    tableClinicas = document.getElementById("table-clinicas");
+                    tableClinicas.innerHTML = "";
+        
+                    // Popula a tabela com os registros do banco de dados
+                    for (let index = 0; index < db.length; index++) {
+                        const clinica = db[index];
+        
+                        // Verifica se os dados do clinica batem com os filtros
+                        if (((clinica.cidade == fc) || (fc == ''))) {
+        
+                            // Inclui o clinica na tabela    
+                            tableClinicas.innerHTML += `<tr><td scope="row">${clinica.id}</td>
+                                                            <td>${clinica.nome}</td>
+                                                            <td>${clinica.endereco}</td>
+                                                            <td>${clinica.cidade}</td>
+                                                            <td>${clinica.latlong}</td>
+                                                            <td>${clinica.cor}</td>
+                                                            <td>${clinica.url}</td>
+                                                        </tr>`;
+                        }
+                    }
+        
+                }
+            </script>
+        
         </body>
     </div>
     <footer class="text-center mt-4">
