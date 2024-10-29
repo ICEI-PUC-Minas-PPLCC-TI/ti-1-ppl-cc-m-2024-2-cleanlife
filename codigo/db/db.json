@@ -160,5 +160,20 @@
         "dependencia"
       ]
     }
+  ],
+  "clinicas": [
+    {
+      "id": 1,
+      "nome": "PUC Minas - Coração Eucarístico",
+      "endereco": "Rua Dom José Gaspar, 500",
+      "favorito": true,
+      "cidade": "Belo Horizonte",
+      "latlong": [
+        -43.992911,
+        -19.923564
+      ],
+      "url": "https://www.pucminas.br",
+      "cor": "red"
+    }
   ]
 }
