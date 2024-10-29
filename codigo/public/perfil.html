@@ -45,14 +45,25 @@
     </header>
     <div class="content">
         <div class="container mt-4">
-            <h1>Perfil</h1>
-            <p>Aqui você pode ver e atualizar suas informações de perfil.</p>
-            <!-- Adicione campos e lógica para visualizar/editar perfil aqui -->
+            <main>
+                <section class="profile">
+                    <h2>NOME DE USUÁRIO:</h2>
+                    <input id="user-name" type="text" class="user-name" value="usuario" disabled>
+                    <h3>BIOGRAFIA:</h3>
+                    <textarea id="biografia" class="bio" disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
+                    <h3>MEUS FÓRUNS:</h3>
+                    <div id="foruns" class="forums">
+                        
+                    </div>
+                    <button  onclick="redirecionar()" class="edit-profile">EDITAR PERFIL</button>
+                </section>
+            </main>
         </div>
     </div>
     <footer class="text-center mt-4">
         <p>&copy; 2024 CleanLife. Todos os direitos reservados.</p>
     </footer>
+    <script src="./assets/js/perfil.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
