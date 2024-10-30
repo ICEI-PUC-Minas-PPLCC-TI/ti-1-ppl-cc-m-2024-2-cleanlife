@@ -21,8 +21,8 @@ async function carregarForuns(callback) {
 function carregaDados(){
     const divForuns  = document.getElementById('foruns'); 
     foruns.forEach(forum => {
-        divForuns.innerHTML += `<a href="forum.html?id=${forum.id}">
-                                    <div class="forum">
+        divForuns.innerHTML += `<a class="forum" href="forum.html?id=${forum.id}">
+                                    <div>
                                         <h3>${forum.titulo}</h3>
                                         <p>Descrição:${forum.descricao}</p>
                                         <p>Objetivo:${forum.objetivo}</p>
