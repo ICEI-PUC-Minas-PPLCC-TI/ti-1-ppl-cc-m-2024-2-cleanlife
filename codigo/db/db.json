@@ -17,6 +17,168 @@
       "biografia": "Biografia",
       "email": "user@abc.com",
       "ehADM": 0
+    },
+    {
+      "id": 3,
+      "login": "julia_23",
+      "senha": "pass123",
+      "nome": "Julia Oliveira",
+      "biografia": "Amo ajudar as pessoas em recuperação.",
+      "email": "julia23@gmail.com",
+      "ehADM": 0
+    },
+    {
+      "id": 4,
+      "login": "marcio_recovery",
+      "senha": "pass456",
+      "nome": "Marcio Santos",
+      "biografia": "Recuperando-se do vício em álcool.",
+      "email": "marcio.santos@hotmail.com",
+      "ehADM": 0
+    },
+    {
+      "id": 5,
+      "login": "luis_inspira",
+      "senha": "luis789",
+      "nome": "Luis Fernando",
+      "biografia": "Compartilhando experiências para ajudar outros.",
+      "email": "luis.inspira@yahoo.com",
+      "ehADM": 0
+    },
+    {
+      "id": 6,
+      "login": "fernanda_92",
+      "senha": "fernanda123",
+      "nome": "Fernanda Lima",
+      "biografia": "Buscando sempre a recuperação plena.",
+      "email": "fernanda.lima@gmail.com",
+      "ehADM": 0
+    },
+    {
+      "id": 7,
+      "login": "tiago_suporte",
+      "senha": "tiago456",
+      "nome": "Tiago Almeida",
+      "biografia": "Apoio a quem busca ajuda.",
+      "email": "tiago.almeida@hotmail.com",
+      "ehADM": 0
+    },
+    {
+      "id": 8,
+      "login": "sara_27",
+      "senha": "sara789",
+      "nome": "Sara Costa",
+      "biografia": "Superando vícios com amor e apoio.",
+      "email": "sara.costa@gmail.com",
+      "ehADM": 0
+    },
+    {
+      "id": 9,
+      "login": "roberto_conselhos",
+      "senha": "roberto123",
+      "nome": "Roberto Silva",
+      "biografia": "Dedicado a ajudar outros a se recuperarem.",
+      "email": "roberto.silva@yahoo.com",
+      "ehADM": 0
+    },
+    {
+      "id": 10,
+      "login": "patricia_ajuda",
+      "senha": "patricia456",
+      "nome": "Patricia Alves",
+      "biografia": "Encontrei paz na recuperação.",
+      "email": "patricia.alves@hotmail.com",
+      "ehADM": 0
+    },
+    {
+      "id": 11,
+      "login": "joao_dicas",
+      "senha": "joao789",
+      "nome": "João Pedro",
+      "biografia": "Aqui para compartilhar dicas e experiências.",
+      "email": "joao.pedro@gmail.com",
+      "ehADM": 0
+    },
+    {
+      "id": 12,
+      "login": "ana_reabilitacao",
+      "senha": "ana123",
+      "nome": "Ana Beatriz",
+      "biografia": "Apoio em momentos difíceis.",
+      "email": "ana.beatriz@yahoo.com",
+      "ehADM": 0
+    },
+    {
+      "id": 13,
+      "login": "mariana_apoio",
+      "senha": "mariana456",
+      "nome": "Mariana Tavares",
+      "biografia": "Encontrei força na comunidade.",
+      "email": "mariana.tavares@gmail.com",
+      "ehADM": 0
+    },
+    {
+      "id": 14,
+      "login": "roberto_experiencias",
+      "senha": "roberto789",
+      "nome": "Roberto Nascimento",
+      "biografia": "Compartilhando experiências sobre vícios.",
+      "email": "roberto.nascimento@hotmail.com",
+      "ehADM": 0
+    },
+    {
+      "id": 15,
+      "login": "carla_sempre",
+      "senha": "carla123",
+      "nome": "Carla Mendes",
+      "biografia": "Apoio à recuperação de dependentes.",
+      "email": "carla.mendes@gmail.com",
+      "ehADM": 0
+    },
+    {
+      "id": 16,
+      "login": "marcelo_ajuda",
+      "senha": "marcelo456",
+      "nome": "Marcelo Gomes",
+      "biografia": "Ajudando outros a se reerguerem.",
+      "email": "marcelo.gomes@yahoo.com",
+      "ehADM": 0
+    },
+    {
+      "id": 17,
+      "login": "vanessa_apoio",
+      "senha": "vanessa789",
+      "nome": "Vanessa Lima",
+      "biografia": "Encontrei força na minha recuperação.",
+      "email": "vanessa.lima@gmail.com",
+      "ehADM": 0
+    },
+    {
+      "id": 18,
+      "login": "rafael_ajuda",
+      "senha": "rafael123",
+      "nome": "Rafael Torres",
+      "biografia": "Dedicado a ajudar os outros.",
+      "email": "rafael.torres@hotmail.com",
+      "ehADM": 0
+    },
+    {
+      "id": 19,
+      "login": "maria_conselhos",
+      "senha": "maria456",
+      "nome": "Maria Clara",
+      "biografia": "Buscando sempre a recuperação.",
+      "email": "maria.clara@gmail.com",
+      "ehADM": 0
+    },
+    {
+      "id": 20,
+      "login": "andre_sempre",
+      "senha": "andre789",
+      "nome": "André Souza",
+      "biografia": "Apoio e motivação na jornada de recuperação.",
+      "email": "andre.souza@yahoo.com",
+      "ehADM": 0
     }
   ],
   "foruns": [
@@ -24,7 +186,7 @@
       "id": 1,
       "titulo": "Suporte para Vício em Drogas",
       "descricao": "Este fórum é para discussões sobre recuperação, dicas de tratamento e apoio mútuo.",
-      "objetivo": "Objetivo",
+      "objetivo": "Ajudar aqueles que enfrentam vícios a encontrar recursos e apoio.",
       "usuarioAdministrador": {
         "id": 1,
         "login": "admin"
@@ -34,10 +196,100 @@
       "id": 2,
       "titulo": "Técnicas de Meditação para Controle de Ansiedade",
       "descricao": "Discussão sobre meditação e técnicas de respiração para ajudar no controle da ansiedade durante a recuperação.",
-      "objetivo": "Objetivo",
+      "objetivo": "Compartilhar práticas que ajudam no controle da ansiedade.",
       "usuarioAdministrador": {
         "id": 2,
         "login": "user"
+      }
+    },
+    {
+      "id": 3,
+      "titulo": "Superação do Vício em Álcool",
+      "descricao": "Espaço para compartilhar histórias de superação e dicas sobre a luta contra o álcool.",
+      "objetivo": "Incentivar a superação e troca de experiências.",
+      "usuarioAdministrador": {
+        "id": 3,
+        "login": "julia_23"
+      }
+    },
+    {
+      "id": 4,
+      "titulo": "Apoio a Dependentes de Crack",
+      "descricao": "Fórum dedicado a discutir estratégias e experiências sobre a dependência do crack.",
+      "objetivo": "Promover um espaço seguro para discutir desafios e estratégias.",
+      "usuarioAdministrador": {
+        "id": 4,
+        "login": "marcio_recovery"
+      }
+    },
+    {
+      "id": 5,
+      "titulo": "Grupo de Apoio à Reabilitação",
+      "descricao": "Fórum para troca de experiências e apoio mútuo entre aqueles em reabilitação.",
+      "objetivo": "Criar uma rede de apoio entre os participantes.",
+      "usuarioAdministrador": {
+        "id": 5,
+        "login": "luis_inspira"
+      }
+    },
+    {
+      "id": 6,
+      "titulo": "Vencendo a Dependência de Nicotina",
+      "descricao": "Discussões sobre métodos para parar de fumar e compartilhar conquistas.",
+      "objetivo": "Ajudar uns aos outros a superar o vício em nicotina.",
+      "usuarioAdministrador": {
+        "id": 6,
+        "login": "fernanda_92"
+      }
+    },
+    {
+      "id": 7,
+      "titulo": "Experiências em Terapia",
+      "descricao": "Troca de experiências sobre diferentes tipos de terapia na recuperação.",
+      "objetivo": "Compartilhar o que funciona e o que não funciona na terapia.",
+      "usuarioAdministrador": {
+        "id": 7,
+        "login": "tiago_suporte"
+      }
+    },
+    {
+      "id": 8,
+      "titulo": "Dicas de Alimentação Saudável",
+      "descricao": "Discussão sobre como uma boa alimentação pode ajudar na recuperação.",
+      "objetivo": "Compartilhar receitas e dicas de alimentação saudável.",
+      "usuarioAdministrador": {
+        "id": 8,
+        "login": "sara_27"
+      }
+    },
+    {
+      "id": 9,
+      "titulo": "Vencendo a Ansiedade",
+      "descricao": "Espaço para discutir sobre a ansiedade e como lidar com ela durante a recuperação.",
+      "objetivo": "Criar um ambiente de apoio para aqueles que enfrentam a ansiedade.",
+      "usuarioAdministrador": {
+        "id": 9,
+        "login": "roberto_conselhos"
+      }
+    },
+    {
+      "id": 10,
+      "titulo": "Motivação na Recuperação",
+      "descricao": "Discussões sobre o que mantém cada um motivado na jornada de recuperação.",
+      "objetivo": "Incentivar a troca de ideias sobre motivação.",
+      "usuarioAdministrador": {
+        "id": 10,
+        "login": "patricia_ajuda"
+      }
+    },
+    {
+      "id": 11,
+      "titulo": "Vidas Transformadas",
+      "descricao": "Espaço para compartilhar histórias de vidas transformadas pela recuperação.",
+      "objetivo": "Celebrar vitórias e aprender com as histórias de outros.",
+      "usuarioAdministrador": {
+        "id": 11,
+        "login": "joao_dicas"
       }
     }
   ],
@@ -46,66 +298,614 @@
       "id": 1,
       "forum_id": 1,
       "usuario": {
-        "id": 2,
-        "login": "user"
+        "id": 1,
+        "login": "admin"
       },
-      "conteudo": "Esse tópico é muito importante para a comunidade, obrigado por criá-lo!",
-      "likes": 1,
+      "conteudo": "Seja bem-vindo ao nosso fórum! Aqui estamos todos juntos nessa jornada.",
+      "likes": 5,
       "comentario_pai_id": null,
       "usuariosQueCurtiram": [
-        1
+        2,
+        3,
+        4,
+        5
       ]
     },
     {
       "id": 2,
       "forum_id": 1,
       "usuario": {
-        "id": 2,
-        "login": "user"
+        "id": 3,
+        "login": "julia_23"
       },
-      "conteudo": "Concordo, é muito bom ver um espaço como esse.",
-      "likes": 0,
-      "comentario_pai_id": 1,
-      "usuariosQueCurtiram": []
+      "conteudo": "Esse fórum é um ótimo espaço para encontrar apoio durante a recuperação.",
+      "likes": 2,
+      "comentario_pai_id": null,
+      "usuariosQueCurtiram": [
+        1,
+        4
+      ]
     },
     {
       "id": 3,
       "forum_id": 1,
       "usuario": {
-        "id": 1,
-        "login": "admin"
+        "id": 4,
+        "login": "marcio_recovery"
       },
-      "conteudo": "Alguém tem recomendações de grupos de apoio locais?",
+      "conteudo": "Concordo, Julia! Aqui encontramos pessoas que realmente entendem nosso caminho.",
       "likes": 1,
-      "comentario_pai_id": null,
+      "comentario_pai_id": 2,
       "usuariosQueCurtiram": [
-        1
+        2
       ]
     },
     {
       "id": 4,
-      "forum_id": 1,
+      "forum_id": 2,
       "usuario": {
-        "id": 2,
-        "login": "user"
+        "id": 5,
+        "login": "luis_inspira"
       },
-      "conteudo": "Eu participo de um ótimo grupo aqui na minha cidade, posso te passar mais informações.",
-      "likes": 0,
-      "comentario_pai_id": 3,
-      "usuariosQueCurtiram": []
+      "conteudo": "A meditação me ajudou muito a controlar a ansiedade. Recomendaria para todos!",
+      "likes": 3,
+      "comentario_pai_id": null,
+      "usuariosQueCurtiram": [
+        1,
+        2,
+        3
+      ]
     },
     {
       "id": 5,
       "forum_id": 2,
       "usuario": {
-        "id": 2,
-        "login": "user"
+        "id": 6,
+        "login": "fernanda_92"
       },
-      "conteudo": "Adoro meditação, tem sido muito útil para mim!",
-      "likes": 1,
+      "conteudo": "Luis, você pode compartilhar alguma técnica específica que você usa?",
+      "likes": 2,
+      "comentario_pai_id": 4,
+      "usuariosQueCurtiram": [
+        3,
+        5
+      ]
+    },
+    {
+      "id": 6,
+      "forum_id": 2,
+      "usuario": {
+        "id": 7,
+        "login": "tiago_suporte"
+      },
+      "conteudo": "A respiração profunda tem sido um grande aliado na minha jornada.",
+      "likes": 2,
+      "comentario_pai_id": 4,
+      "usuariosQueCurtiram": [
+        1,
+        6
+      ]
+    },
+    {
+      "id": 7,
+      "forum_id": 3,
+      "usuario": {
+        "id": 8,
+        "login": "sara_27"
+      },
+      "conteudo": "Superar o vício em álcool é desafiador, mas juntos somos mais fortes.",
+      "likes": 4,
       "comentario_pai_id": null,
       "usuariosQueCurtiram": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "id": 8,
+      "forum_id": 3,
+      "usuario": {
+        "id": 9,
+        "login": "felipe_apoio"
+      },
+      "conteudo": "Exatamente, Sara! A força da comunidade faz toda a diferença.",
+      "likes": 3,
+      "comentario_pai_id": 7,
+      "usuariosQueCurtiram": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 9,
+      "forum_id": 3,
+      "usuario": {
+        "id": 10,
+        "login": "jose_foco"
+      },
+      "conteudo": "Todos aqui podem contar com o meu apoio. Estamos juntos nessa.",
+      "likes": 2,
+      "comentario_pai_id": 8,
+      "usuariosQueCurtiram": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": 10,
+      "forum_id": 4,
+      "usuario": {
+        "id": 11,
+        "login": "roberto_conselhos"
+      },
+      "conteudo": "Esse fórum é essencial para quem luta contra a dependência do crack. Vamos nos ajudar!",
+      "likes": 5,
+      "comentario_pai_id": null,
+      "usuariosQueCurtiram": [
+        1,
+        2,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "id": 11,
+      "forum_id": 4,
+      "usuario": {
+        "id": 12,
+        "login": "patricia_ajuda"
+      },
+      "conteudo": "Roberto, você tem alguma dica que tenha funcionado para você?",
+      "likes": 2,
+      "comentario_pai_id": 10,
+      "usuariosQueCurtiram": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 12,
+      "forum_id": 4,
+      "usuario": {
+        "id": 13,
+        "login": "fernando_forca"
+      },
+      "conteudo": "Conversei com um profissional que me ajudou muito. Pode ser uma boa opção.",
+      "likes": 3,
+      "comentario_pai_id": 10,
+      "usuariosQueCurtiram": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": 13,
+      "forum_id": 5,
+      "usuario": {
+        "id": 14,
+        "login": "joao_dicas"
+      },
+      "conteudo": "Grupo de apoio é fundamental. Aqui todos se entendem.",
+      "likes": 3,
+      "comentario_pai_id": null,
+      "usuariosQueCurtiram": [
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "id": 14,
+      "forum_id": 5,
+      "usuario": {
+        "id": 15,
+        "login": "ana_reabilitacao"
+      },
+      "conteudo": "Concordo, João! A troca de experiências é muito enriquecedora.",
+      "likes": 4,
+      "comentario_pai_id": 13,
+      "usuariosQueCurtiram": [
+        1,
+        2,
+        6,
+        8
+      ]
+    },
+    {
+      "id": 15,
+      "forum_id": 5,
+      "usuario": {
+        "id": 16,
+        "login": "marcio_sempre"
+      },
+      "conteudo": "É sempre bom ouvir histórias de superação. Nos motiva a continuar.",
+      "likes": 2,
+      "comentario_pai_id": 13,
+      "usuariosQueCurtiram": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 16,
+      "forum_id": 6,
+      "usuario": {
+        "id": 17,
+        "login": "mariana_apoio"
+      },
+      "conteudo": "Parar de fumar é um grande desafio, mas com apoio tudo é possível.",
+      "likes": 2,
+      "comentario_pai_id": null,
+      "usuariosQueCurtiram": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": 17,
+      "forum_id": 6,
+      "usuario": {
+        "id": 18,
+        "login": "roberto_experiencias"
+      },
+      "conteudo": "Mariana, você já tentou usar adesivos de nicotina?",
+      "likes": 1,
+      "comentario_pai_id": 16,
+      "usuariosQueCurtiram": [
+        3
+      ]
+    },
+    {
+      "id": 18,
+      "forum_id": 6,
+      "usuario": {
+        "id": 19,
+        "login": "pedro_vitoria"
+      },
+      "conteudo": "Eu usei adesivos e funcionaram bem para mim. Boa sorte!",
+      "likes": 2,
+      "comentario_pai_id": 17,
+      "usuariosQueCurtiram": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 19,
+      "forum_id": 7,
+      "usuario": {
+        "id": 20,
+        "login": "carla_sempre"
+      },
+      "conteudo": "A terapia foi um divisor de águas na minha recuperação.",
+      "likes": 3,
+      "comentario_pai_id": null,
+      "usuariosQueCurtiram": [
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 20,
+      "forum_id": 7,
+      "usuario": {
+        "id": 21,
+        "login": "marcelo_ajuda"
+      },
+      "conteudo": "Concordo, Carla! A terapia pode ser muito eficaz.",
+      "likes": 2,
+      "comentario_pai_id": 19,
+      "usuariosQueCurtiram": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": 21,
+      "forum_id": 7,
+      "usuario": {
+        "id": 22,
+        "login": "aline_inspiracao"
+      },
+      "conteudo": "E é importante encontrar um terapeuta que realmente se conecte com você.",
+      "likes": 3,
+      "comentario_pai_id": 20,
+      "usuariosQueCurtiram": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 22,
+      "forum_id": 8,
+      "usuario": {
+        "id": 23,
+        "login": "andre_motivacao"
+      },
+      "conteudo": "Manter-se ocupado com atividades saudáveis é fundamental!",
+      "likes": 2,
+      "comentario_pai_id": null,
+      "usuariosQueCurtiram": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": 23,
+      "forum_id": 8,
+      "usuario": {
+        "id": 24,
+        "login": "luan_apoio"
+      },
+      "conteudo": "Atividades como esportes ou hobbies ajudam muito na recuperação.",
+      "likes": 2,
+      "comentario_pai_id": 22,
+      "usuariosQueCurtiram": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 24,
+      "forum_id": 8,
+      "usuario": {
+        "id": 25,
+        "login": "vanessa_forca"
+      },
+      "conteudo": "Fazer exercícios me ajudou a liberar a tensão e melhorar meu humor.",
+      "likes": 1,
+      "comentario_pai_id": 22,
+      "usuariosQueCurtiram": [
+        3
+      ]
+    },
+    {
+      "id": 25,
+      "forum_id": 9,
+      "usuario": {
+        "id": 26,
+        "login": "carla_apoio"
+      },
+      "conteudo": "Este fórum é uma ótima maneira de encontrar apoio e motivação!",
+      "likes": 5,
+      "comentario_pai_id": null,
+      "usuariosQueCurtiram": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": 26,
+      "forum_id": 9,
+      "usuario": {
+        "id": 27,
+        "login": "rogerio_29"
+      },
+      "conteudo": "Concordo, Carla! A conexão com outras pessoas é muito importante.",
+      "likes": 4,
+      "comentario_pai_id": 25,
+      "usuariosQueCurtiram": [
+        1,
+        2,
+        5
+      ]
+    },
+    {
+      "id": 27,
+      "forum_id": 9,
+      "usuario": {
+        "id": 28,
+        "login": "fabio_seguindo"
+      },
+      "conteudo": "Todo dia é uma nova oportunidade para melhorar. Vamos juntos!",
+      "likes": 3,
+      "comentario_pai_id": 25,
+      "usuariosQueCurtiram": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": 28,
+      "forum_id": 10,
+      "usuario": {
+        "id": 29,
+        "login": "renata_reconstrucao"
+      },
+      "conteudo": "Recuperação é um processo, não um destino. Estamos todos juntos!",
+      "likes": 5,
+      "comentario_pai_id": null,
+      "usuariosQueCurtiram": [
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "id": 29,
+      "forum_id": 10,
+      "usuario": {
+        "id": 30,
+        "login": "felipe_esperanca"
+      },
+      "conteudo": "Sim, Renata! Cada passo conta. Vamos compartilhar nossas vitórias.",
+      "likes": 2,
+      "comentario_pai_id": 28,
+      "usuariosQueCurtiram": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 30,
+      "forum_id": 10,
+      "usuario": {
+        "id": 31,
+        "login": "lucas_apoio"
+      },
+      "conteudo": "Estar aqui e compartilhar experiências é um passo importante para todos nós.",
+      "likes": 1,
+      "comentario_pai_id": 28,
+      "usuariosQueCurtiram": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": 31,
+      "forum_id": 1,
+      "usuario": {
+        "id": 32,
+        "login": "carla_foco"
+      },
+      "conteudo": "Lembre-se sempre de cuidar da sua saúde mental. Isso é fundamental!",
+      "likes": 2,
+      "comentario_pai_id": null,
+      "usuariosQueCurtiram": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 32,
+      "forum_id": 1,
+      "usuario": {
+        "id": 33,
+        "login": "tiago_foco"
+      },
+      "conteudo": "Perfeito, Carla! Cuidar da mente é tão importante quanto cuidar do corpo.",
+      "likes": 3,
+      "comentario_pai_id": 31,
+      "usuariosQueCurtiram": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": 33,
+      "forum_id": 2,
+      "usuario": {
+        "id": 34,
+        "login": "jose_estrategias"
+      },
+      "conteudo": "Criar rotinas saudáveis é uma ótima estratégia para a recuperação.",
+      "likes": 2,
+      "comentario_pai_id": null,
+      "usuariosQueCurtiram": [
+        2,
+        5
+      ]
+    },
+    {
+      "id": 34,
+      "forum_id": 3,
+      "usuario": {
+        "id": 35,
+        "login": "marcio_alem"
+      },
+      "conteudo": "É sempre bom lembrar que cada um tem seu tempo. Não se compare!",
+      "likes": 4,
+      "comentario_pai_id": null,
+      "usuariosQueCurtiram": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": 35,
+      "forum_id": 4,
+      "usuario": {
+        "id": 36,
+        "login": "patricia_suporte"
+      },
+      "conteudo": "Acreditem, a mudança é possível! Eu sou prova disso.",
+      "likes": 2,
+      "comentario_pai_id": null,
+      "usuariosQueCurtiram": [
+        1,
         2
+      ]
+    },
+    {
+      "id": 36,
+      "forum_id": 5,
+      "usuario": {
+        "id": 37,
+        "login": "luan_sempre"
+      },
+      "conteudo": "Juntos, conseguimos! Vamos em frente!",
+      "likes": 3,
+      "comentario_pai_id": null,
+      "usuariosQueCurtiram": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 37,
+      "forum_id": 6,
+      "usuario": {
+        "id": 38,
+        "login": "renato_forca"
+      },
+      "conteudo": "Aqui é um espaço seguro. Fiquem à vontade para compartilhar!",
+      "likes": 3,
+      "comentario_pai_id": null,
+      "usuariosQueCurtiram": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 38,
+      "forum_id": 7,
+      "usuario": {
+        "id": 39,
+        "login": "carla_espaco"
+      },
+      "conteudo": "A comunicação é a chave para superar muitos desafios.",
+      "likes": 4,
+      "comentario_pai_id": null,
+      "usuariosQueCurtiram": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": 39,
+      "forum_id": 8,
+      "usuario": {
+        "id": 40,
+        "login": "nina_jornada"
+      },
+      "conteudo": "Lembrem-se: cada dia é uma nova chance para começar de novo.",
+      "likes": 2,
+      "comentario_pai_id": null,
+      "usuariosQueCurtiram": [
+        1,
+        2,
+        5
+      ]
+    },
+    {
+      "id": 40,
+      "forum_id": 9,
+      "usuario": {
+        "id": 41,
+        "login": "vitor_energia"
+      },
+      "conteudo": "A energia que trazemos para nossas vidas pode mudar tudo!",
+      "likes": 3,
+      "comentario_pai_id": null,
+      "usuariosQueCurtiram": [
+        2,
+        3,
+        4
       ]
     }
   ],
