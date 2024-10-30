@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CleanLife</title>
-    <link rel="stylesheet" href="./assets/css/cadastroArtigos.css">
+    <link rel="stylesheet" href="./assets/css/cadastro.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <script src="./assets/js/login.js"></script>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -45,8 +45,105 @@
     </header>
 
     <div class="container mt-4">
-        <h1>Cadastro de Artigos</h1>
-        <p>Esta é uma tela dos administradores do site, onde podem ser feitos cadastro de novos artigos.</p>
+        <body onload="init()">
+            <h1>Cadastro de Artigos (CRUD)</h1>
+        
+            <div class="container">
+                <div class="row">
+                    <div id="msg" class="col-sm-10 offset-sm-1 ">
+                        <!--<div class="alert alert-warning">Artigo não encontrado.</div>-->
+                    </div>
+                </div>
+        
+                <form id="form-artigo">
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <label for="inputId">Id</label>
+                            <input type="text" class="form-control" id="inputId" placeholder="ID" disabled>
+                        </div>
+                        <div class="col-sm-8">
+                            <label for="inputTitulo">Titulo (*)</label>
+                            <input type="text" class="form-control" id="inputTitulo" required placeholder="Informe o título do artigo">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-5">
+                            <label for="inputLink">URL (*)</label>
+                            <input type="text" class="form-control" id="inputLink" required placeholder="URL">
+                        </div>
+                        <div class="col-sm-7">
+                            <label for="inputCidade">Cidade (*)</label>
+                            <input type="text" class="form-control" id="inputCidade" required placeholder="Informe a cidade">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="inputLat">Lat (*)</label>
+                            <input type="text" class="form-control" id="inputLat" required placeholder="Informe a latitude da clinica" >
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="inputLong">Long (*)</label>
+                            <input type="text" class="form-control" id="inputLong" required placeholder="Informe a longitude da clinica">
+                        </div>
+                    </div>
+                    <div class="form-group row">    
+                        <div class="col-sm-6">
+                            <label for="inputCor">Cor (Ingles)</label>
+                            <input type="text" class="form-control" id="inputCor" placeholder="Cor">
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="inputSite">Site (*)</label>
+                            <input type="text" class="form-control" id="inputSite" required placeholder="Web Site">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <small>(*) Campos obrigatórios</small>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <input type="button" class="btn btn-success" id="btnInsert" value="Inserir">
+                            <input type="button" class="btn btn-warning" id="btnUpdate" value="Alterar">
+                            <input type="button" class="btn btn-danger" id="btnDelete" value="Excluir">
+                            <input type="button" class="btn btn-secondary" id="btnClear" value="Limpar Form">
+                            <a href="searchArtigos.html"><input type="button" class="btn btn-warning" id="btnClear" value="Pesquisar Clinicas"></a>
+                        </div>
+                    </div>
+                </form>
+        
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table id="grid-clinicas" class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">Endereço</th>
+                                    <th scope="col">Cidade</th>
+                                    <th scope="col">Latlong</th>
+                                    <th scope="col">Cor</th>
+                                    <th scope="col">Site</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-clinicas">
+                                <tr>
+                                    <td scope="row">1</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        
+            <script src="./assets/js/cadastroArtigos.js"></script>
+        </body>
     </div>
     
     <footer class="text-center mt-4">
