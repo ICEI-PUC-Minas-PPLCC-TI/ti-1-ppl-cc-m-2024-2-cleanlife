@@ -5,98 +5,95 @@ function displayMessage(mensagem) {
     msg.innerHTML = '<div class="alert alert-warning">' + mensagem + '</div>';
 }
 
-function readClinica(processaDados) {
+function readArtigo(processaDados) {
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
             processaDados(data);
         })
         .catch(error => {
-            console.error('Erro ao ler clinicas via API JSONServer:', error);
-            displayMessage("Erro ao ler clinicas");
+            console.error('Erro ao ler artigos via API JSONServer:', error);
+            displayMessage("Erro ao ler artigos");
         });
 }
 
-function createClinica(clinica, refreshFunction) {
+function createArtigo(artigo, refreshFunction) {
     fetch(apiUrl, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(clinica),
+        body: JSON.stringify(artigo),
     })
         .then(response => response.json())
         .then(data => {
-            displayMessage("Clinica inserida com sucesso");
+            displayMessage("Artigo inserido com sucesso");
             if (refreshFunction)
                 refreshFunction();
         })
         .catch(error => {
-            console.error('Erro ao inserir clinica via API JSONServer:', error);
-            displayMessage("Erro ao inserir clinica");
+            console.error('Erro ao inserir artigo via API JSONServer:', error);
+            displayMessage("Erro ao inserir artigo");
         });
 }
 
-function updateClinica(id, clinica, refreshFunction) {
+function updateArtigo(id, artigo, refreshFunction) {
     fetch(`${apiUrl}/${id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(clinica),
+        body: JSON.stringify(artigo),
     })
         .then(response => response.json())
         .then(data => {
-            displayMessage("Clinica alterada com sucesso");
+            displayMessage("Artigo alterado com sucesso");
             if (refreshFunction)
                 refreshFunction();
         })
         .catch(error => {
-            console.error('Erro ao atualizar clinica via API JSONServer:', error);
-            displayMessage("Erro ao atualizar clinica");
+            console.error('Erro ao atualizar artigo via API JSONServer:', error);
+            displayMessage("Erro ao atualizar artigo");
         });
 }
 
-function deleteClinica(id, refreshFunction) {
+function deleteArtigo(id, refreshFunction) {
     fetch(`${apiUrl}/${id}`, {
         method: 'DELETE',
     })
         .then(response => response.json())
         .then(data => {
-            displayMessage("Clinica removida com sucesso");
+            displayMessage("Artigo removido com sucesso");
             if (refreshFunction)
                 refreshFunction();
         })
         .catch(error => {
-            console.error('Erro ao remover clinica via API JSONServer:', error);
-            displayMessage("Erro ao remover clinica");
+            console.error('Erro ao remover artigo via API JSONServer:', error);
+            displayMessage("Erro ao remover artigo");
         });
 }
 
-function exibeClinicas() {
-    tableClinicas = document.getElementById("table-clinicas");
+function exibeArtigos() {
+    tableArtigos = document.getElementById("table-artigos");
 
     // Remove todas as linhas do corpo da tabela
-    tableClinicas.innerHTML = "";
+    tableArtigos.innerHTML = "";
 
-    readClinica (dados => {
+    readArtigo (dados => {
         // Popula a tabela com os registros do banco de dados
         for (i = 0; i < dados.length; i++) {
-            let clinica = dados[i];    
-            tableClinicas.innerHTML += `<tr><td scope="row">${clinica.id}</td>
-                                            <td>${clinica.nome}</td>
-                                            <td>${clinica.endereco}</td>
-                                            <td>${clinica.cidade}</td>
-                                            <td>${clinica.latlong}</td>
-                                            <td>${clinica.cor}</td>
-                                            <td>${clinica.url}</td>
+            let artigo = dados[i];    
+            tableArtigos.innerHTML += `<tr><td scope="row">${artigo.id}</td>
+                                            <td>${artigo.titulo}</td>
+                                            <td>${artigo.link}</td>
+                                            <td>${artigo.tags}</td>
                                         </tr>`;
         }
     })
 }
 
 function init() {
-    // Define uma variável para o formulário de clinica
+    // Define uma variável para o formulário de artigo
     formArtigo = document.getElementById("form-artigo");
 
     // Adiciona funções para tratar os eventos 
@@ -110,25 +107,24 @@ function init() {
 
         // Obtem os valores dos campos do formulário
         let campoTitulo = document.getElementById ('inputTitulo').value;
-        let campoEndereco = document.getElementById ('inputEndereco').value;
-        let campoCidade = document.getElementById ('inputCidade').value;
-        let campoLat = document.getElementById ('inputLat').value;
-        let campoLong = document.getElementById ('inputLong').value;
-        let campoCor = document.getElementById ('inputCor').value;
-        let campoSite = document.getElementById ('inputSite').value;
+        let campoLink = document.getElementById ('inputLink').value;
+        let campoTag1 = document.getElementById ('inputTag1').value;
+        let campoTag2 = document.getElementById ('inputTag2').value;
+        let campoTag3 = document.getElementById ('inputTag3').value;
 
-        // Cria um objeto com os dados da clinica
+        // Cria um objeto com os dados do artigo
         let artigo = { 
             titulo: campoTitulo, 
-            link: campoEndereco,
+            link: campoLink,
             tags: [
-                campoLat,
-                campoLong
+                campoTag1,
+                campoTag2,
+                campoTag3
             ]
         };
 
-        // Cria a clinica no banco de dados
-        createClinica(artigo, exibeClinicas);
+        // Cria o artigo no banco de dados
+        createArtigo(artigo, exibeArtigos);
 
         // Limpa o formulario
         formArtigo.reset()
@@ -140,34 +136,30 @@ function init() {
         // Obtem os valores dos campos do formulário
         let campoId = document.getElementById("inputId").value;
         if (campoId == "") {
-            displayMessage("Selecione antes uma clinica para ser alterada.");
+            displayMessage("Selecione antes um artigo para ser alterada.");
             return;
         }
 
-        // Obtem os valores dos campos do formulário
-        let campoNome = document.getElementById ('inputTitulo').value;
-        let campoEndereco = document.getElementById ('inputEndereco').value;
-        let campoCidade = document.getElementById ('inputCidade').value;
-        let campoLat = document.getElementById ('inputLat').value;
-        let campoLong = document.getElementById ('inputLong').value;
-        let campoCor = document.getElementById ('inputCor').value;
-        let campoSite = document.getElementById ('inputSite').value;
+         // Obtem os valores dos campos do formulário
+         let campoTitulo = document.getElementById ('inputTitulo').value;
+         let campoLink = document.getElementById ('inputLink').value;
+         let campoTag1 = document.getElementById ('inputTag1').value;
+         let campoTag2 = document.getElementById ('inputTag2').value;
+         let campoTag3 = document.getElementById ('inputTag3').value;
+ 
+         // Cria um objeto com os dados do artigo
+         let artigo = { 
+             titulo: campoTitulo, 
+             link: campoLink,
+             tags: [
+                 campoTag1,
+                 campoTag2,
+                 campoTag3
+             ]
+         };
 
-        // Cria um objeto com os dados da clinica
-        let clinica = { 
-            nome: campoNome, 
-            endereco: campoEndereco,
-            cidade: campoCidade, 
-            latlong: [
-                campoLat,
-                campoLong
-            ],
-            url: campoSite,
-            cor: campoCor
-        };
-
-        // Altera a clinica no banco de dados
-        updateClinica(parseInt(campoId), clinica, exibeClinicas);
+        // Altera o artigo no banco de dados
+        updateArtigo(parseInt(campoId), artigo, exibeArtigos);
 
         // Limpa o formulario
         formArtigo.reset()
@@ -178,18 +170,18 @@ function init() {
     btnDelete.addEventListener ('click', function () {
         let campoId = document.getElementById('inputId').value;
         if (campoId == "") {
-            displayMessage("Selecione uma clinica a ser excluída.");
+            displayMessage("Selecione um artigo a ser excluído.");
             return;
         }
 
-        // Exclui a clinica no banco de dados
-        deleteClinica(parseInt(campoId), exibeClinicas);
+        // Exclui o artigo no banco de dados
+        deleteArtigo(parseInt(campoId), exibeArtigos);
 
         // Limpa o formulario
         formArtigo.reset()
     });
 
-    // Trata o click do botão Listar Clinicas
+    // Trata o click do botão Listar Artigos
     btnClear = document.getElementById('btnClear');
     btnClear.addEventListener ('click', function () {                
         formArtigo.reset()
@@ -206,26 +198,24 @@ function init() {
     })
 
     // Preenche o formulário quando o usuario clicar em uma linha da tabela 
-    gridClinicas = document.getElementById("grid-clinicas");
-    gridClinicas.addEventListener('click', function (e) {
+    gridArtigos = document.getElementById("grid-artigos");
+    gridArtigos.addEventListener('click', function (e) {
         if (e.target.tagName == "TD") { 
 
             // Obtem as colunas da linha selecionada na tabela
-            let linhaClinica = e.target.parentNode;
-            colunas = linhaClinica.querySelectorAll("td");
+            let linhaArtigo = e.target.parentNode;
+            colunas = linhaArtigo.querySelectorAll("td");
 
             // Preenche os campos do formulário com os dados da linha selecionada na tabela
             document.getElementById ('inputId').value = colunas[0].innerText;
             document.getElementById ('inputTitulo').value = colunas[1].innerText;
-            document.getElementById ('inputEndereco').value = colunas[2].innerText;
-            document.getElementById ('inputCidade').value = colunas[3].innerText;
-            let latlong = colunas[4].innerText.split(",")
-            document.getElementById ('inputLat').value = latlong[0].trim();
-            document.getElementById ('inputLong').value = latlong[1].trim();
-            document.getElementById ('inputCor').value = colunas[5].innerText;
-            document.getElementById ('inputSite').value = colunas[6].innerText;
+            document.getElementById ('inputLink').value = colunas[2].innerText;
+            let tags = colunas[3].innerText.split(",")
+            document.getElementById ('inputTag1').value = tags[0].trim();
+            document.getElementById ('inputTag2').value = tags[1].trim();
+            document.getElementById ('inputTag3').value = tags[2].trim();
         }
     });
 
-    exibeClinicas();
+    exibeArtigos();
 }
