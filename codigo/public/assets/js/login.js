@@ -136,8 +136,8 @@ function showUserInfo (element) {
         if (usuarioCorrente.ehADM == 1) {
             elemUser.innerHTML += `<a onclick="navADM()" style="margin: 50px;"><i class="ph-bold ph-gear-six gearIcon" style="font-size: 23px"></i> </a>`;
         }
-        elemUser.innerHTML += `${usuarioCorrente.nome} (${usuarioCorrente.login}) 
-        <a onclick="logoutUser()"> <i class="ph-bold ph-sign-out" style="font-size: 23px"></i></a>`;
+        elemUser.innerHTML += `${usuarioCorrente.nome}  
+        <a onclick="logoutUser()" style="margin-left: 5px"> <i class="ph-bold ph-sign-out" style="font-size: 23px"></i></a>`;
     }
 }
 
