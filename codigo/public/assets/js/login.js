@@ -169,9 +169,6 @@ function navADM() {
                                                 <li class="nav-item">
                                                     <a class="nav-link" href="cadastro-clinicas.html">Cadastro Clinicas</a>
                                                 </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="">Cadastro 3</a>
-                                                </li>
                                             </ul>
                                         </div>
                                     </nav>`;
