@@ -11,7 +11,7 @@
 
 
 // Página inicial de Login
-const LOGIN_URL = "/modulos/login/login.html";
+const LOGIN_URL = "/login.html";
 let RETURN_URL = "/home.html";
 const API_URL = '/usuarios';
 
@@ -104,29 +104,35 @@ function logoutUser () {
     window.location = LOGIN_URL;
 }
 
-function addUser (nome, login, senha, email) {
+async function addUser (nome, login, senha, email) {
 
     // Cria um objeto de usuario para o novo usuario 
     let usuario = { "login": login, "senha": senha, "nome": nome, "email": email };
 
     // Envia dados do novo usuário para ser inserido no JSON Server
-    fetch(API_URL, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(usuario),
-    })
-        .then(response => response.json())
-        .then(data => {
-            // Adiciona o novo usuário na variável db_usuarios em memória
-            db_usuarios.push (usuario);
-            displayMessage("Usuário inserido com sucesso");
-        })
-        .catch(error => {
-            console.error('Erro ao inserir usuário via API JSONServer:', error);
-            displayMessage("Erro ao inserir usuário");
+    try {
+        const response = await fetch(API_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(usuario),
         });
+
+        if (!response.ok) {
+            throw new Error(`Erro na API: ${response.statusText}`);
+        }
+
+        const data = await response.json();
+
+        // Adiciona o novo usuário na variável db_usuarios em memória
+        db_usuarios.push(data);
+        console.log('Usuário adicionado com sucesso:', data);
+        return true;
+    } catch (error) {
+        console.error('Erro ao inserir usuário via API JSONServer:', error);
+        return false;
+    }
 }
 
 function showUserInfo (element) {
