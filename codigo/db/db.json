@@ -975,5 +975,16 @@
       "url": "https://www.pucminas.br",
       "cor": "red"
     }
+  ],
+  "contador": [
+    {
+      "usuarioId": 1,
+      "inicio": "2023-11-22T16:40:24.459Z"
+    },
+    {
+      "id": 1732293624459,
+      "usuarioId": 2,
+      "inicio": "2024-11-22T16:40:24.459Z"
+    }
   ]
 }
