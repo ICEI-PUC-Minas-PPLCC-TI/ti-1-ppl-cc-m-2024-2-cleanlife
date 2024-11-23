@@ -7,7 +7,7 @@ window.onload = async function () {
 
     try {
         // Fazendo uma requisição para obter o JSON
-        const response = await fetch('/contador');
+        const response = await fetch('/contadores');
         const data = await response.json();
 
         // Procurando o objeto do usuário corrente
@@ -91,8 +91,10 @@ window.onload = async function () {
                             text = `${diffDays} dia ${diffHours} h`;
                         }else if (diffDays > 1 && diffDays < 7) {
                             text = `${diffDays} dias ${diffHours} h`;
-                        }else {
+                        }else if (diffDays < 1){
                             text = `${diffHours} horas`;
+                        }else {
+                            text = `${diffDays} dias`;
                         }
 
                         // Desenha o texto no centro
@@ -114,7 +116,7 @@ window.onload = async function () {
             info.innerHTML = `
                 <h1>META: ${goal > 1 ? goal + " dias" : "24 horas"}!</h1>
                 <br>
-                <button class="btn btn-danger" onclick="resetCounter()">Reiniciar Contador</button>
+                <button class="reset-btn" data-toggle="modal" data-target="#Modal">Reiniciar Contador</button>
             `;
         } else {
             // Caso não exista, exibir botão para iniciar o contador
@@ -143,14 +145,13 @@ window.onload = async function () {
                 };
 
                 // Salvando o novo objeto (POST)
-                const saveResponse = await fetch('/contador', {
+                const saveResponse = await fetch('/contadores', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(newCounter)
                 });
 
                 if (saveResponse.ok) {
-                    alert("Contador iniciado com sucesso!");
                     location.reload(); // Recarrega a página para exibir os dados
                 } else {
                     alert("Erro ao iniciar o contador. Tente novamente.");
@@ -165,16 +166,44 @@ window.onload = async function () {
 
 // Lógica para resetar o contador
 async function resetCounter() {
-    if (confirm("Tem certeza de que deseja zerar o contador?")) {
-        const deleteResponse = await fetch(`/contador/${usuarioCorrente.id}`, {
+    try {
+        const response = await fetch('/contadores');
+        const data = await response.json();
+
+        // Procurando o objeto do usuário corrente
+        const userCounter = data.find(item => item.usuarioId === usuarioCorrente.id);
+
+        const deleteResponse = await fetch(`/contadores/${userCounter.id}`, {
             method: "DELETE",
         });
 
-        if (deleteResponse.ok) {
-            alert("Contador reiniciado com sucesso!");
+        if (!deleteResponse.ok) {
+            alert(`Erro ao reiniciar o contador. Código: ${deleteResponse.status}`);
+            return;
+        }
+
+        const today = new Date().toISOString();
+
+        const newCounter = {
+            id: Date.now(),
+            usuarioId: usuarioCorrente.id,
+            inicio: today
+        };
+
+        const saveResponse = await fetch('/contadores', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(newCounter)
+        });
+
+        if (saveResponse.ok) {
             location.reload();
         } else {
-            alert("Erro ao reiniciar o contador. Tente novamente.");
+            alert(`Erro ao iniciar o contador. Código: ${saveResponse.status}`);
         }
+    } catch (error) {
+        console.error("Erro inesperado:", error);
+        alert("Ocorreu um erro inesperado. Tente novamente mais tarde.");
     }
 }
+

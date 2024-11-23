@@ -976,7 +976,7 @@
       "cor": "red"
     }
   ],
-  "contador": [
+  "contadores": [
     {
       "usuarioId": 1,
       "inicio": "2023-11-22T16:40:24.459Z"
