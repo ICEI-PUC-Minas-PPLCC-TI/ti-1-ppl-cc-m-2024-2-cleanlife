@@ -1,0 +1,8 @@
+@import url(style.css);
+body { margin: 50; padding: 0; }
+#map {
+    width: 100%; /* Use largura total */
+    height: 60vh; /* Altura como 60% da altura da viewport */
+    margin: 20px auto; /* Centraliza com margens */
+    border: 1px solid #ccc; /* Opcional: adiciona uma borda */
+}
