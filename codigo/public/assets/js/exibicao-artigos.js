@@ -5,10 +5,13 @@ async function carregarArtigos() {
   try {
     const response = await fetch('db.json');
     if (!response.ok) throw new Error('Erro ao carregar os dados');
-    const artigos = await response.json();
+    const data = await response.json();
+
+    // Certifique-se de que a propriedade "artigos" existe no JSON
+    if (!data.artigos) throw new Error('Formato inválido do JSON');
 
     // Renderiza os artigos no formato de blocos
-    artigos.forEach(artigo => {
+    data.artigos.forEach(artigo => {
       const artigoDiv = document.createElement('div');
       artigoDiv.className = 'artigo';
 
