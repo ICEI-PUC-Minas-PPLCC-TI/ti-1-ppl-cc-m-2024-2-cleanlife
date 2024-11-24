@@ -124,3 +124,8 @@ body {
      position: static;
    }
  }
+
+ .header-buscar{
+    text-decoration: none;
+    color: black;
+ }
