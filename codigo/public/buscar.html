@@ -1,11 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/buscar.css">
+    <script src="./assets/js/login.js"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
-   
+    <header>
+        <nav id="NavBar" class="navbar navbar-expand-md navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">CleanLife</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dias-sobrios.html">Dias Sóbrios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="perfil.html">Perfil</a>
+                    </li>
+                    <li class="nav-item"></li>
+                        <a class="nav-link" href="clinicas.html">Clinicas</a>
+                    </li>
+                    <li class="nav-item"></li>
+                        <a class="nav-link" href="saiba-mais.html">Saiba Mais</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="dados-usuario">
+                <span id="userInfo"></span>
+            </div>
+        </nav>
+    </header>
+    
+    <header>
+        <div id="navBarADM">
+            
+        </div>
+    </header>
+
+    <div class="buscar-header">
+        <h2 class="titulo-buscar">Buscar</h2>  
+
+        <i class="ph-magnifying-glass"></i>
+    </div>
+
+    <div class="buscar" >
+        <div class="buscar-container">
+            <input id="inputBusca" type="text" onkeyup="filtrar()" placeholder="Digite aqui...">
+            <ul id="listarForuns">
+                        
+            </ul>
+        </div>
+    </div>
+    
+    <footer class="text-center mt-4">
+        <p class="cleanLife">&copy; 2024 CleanLife. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="./assets/js/buscar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
