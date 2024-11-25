@@ -1,30 +1,30 @@
 const urlR = `/foruns`;
 
 fetch(urlR)
-    .then(res => res.json())
-    .then((json) => {
-        const ul = document.getElementById('listarForuns');
-        const maxResults = 10;
-        let count = 0;
-         
-         console.log(json);
-         
+.then(res => res.json())
+.then((json) => {
+    const ul = document.getElementById('listarForuns');
+    const maxResults = 10;
+    let count = 0;
+        
+    console.log(json);
+        
 
-        json.forEach((item) => {
-            const li = document.createElement("li");
-            li.innerHTML =` 
-                <a href="forum.html?id=${item.id}">
-                    <span class="item-name">${item.titulo}</span>
-                </a>`;
-            ul.appendChild(li);
-            count++;
+    json.forEach((forum) => {
+        const li = document.createElement("li");
+        li.innerHTML =` 
+            <a href="forum.html?id=${forum.id}">
+                <span class="item-name">${forum.titulo}</span>
+            </a>`;
+        ul.appendChild(li);
+        count++;
 
 
-            if (count > maxResults) {
-                li.style.display = "none";
-            }
-        });
+        if (count > maxResults) {
+            li.style.display = "none";
+        }
     });
+});
 
 function filtrar() {
     var input,
