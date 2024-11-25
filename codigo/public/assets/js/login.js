@@ -175,6 +175,9 @@ function navADM() {
                                                 <li class="nav-item">
                                                     <a class="nav-link" href="cadastro-clinicas.html">Cadastro Clinicas</a>
                                                 </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="estatisticas-gerais.html">Estatisticas Gerais</a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </nav>`;
