@@ -3,15 +3,15 @@ const container = document.getElementById('artigos-container');
 
 async function carregarArtigos() {
   try {
-    const response = await fetch('db.json');
+    const response = await fetch('/artigos');
     if (!response.ok) throw new Error('Erro ao carregar os dados');
     const data = await response.json();
 
     
-    if (!data.artigos) throw new Error('Formato inválido do JSON');
+    if (!data) throw new Error('Formato inválido do JSON');
 
    
-    data.artigos.forEach(artigo => {
+    data.forEach(artigo => {
       const artigoDiv = document.createElement('div');
       artigoDiv.className = 'artigo';
 
