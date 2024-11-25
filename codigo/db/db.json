@@ -963,17 +963,76 @@
   ],
   "clinicas": [
     {
-      "id": 1,
-      "nome": "PUC Minas - Coração Eucarístico",
-      "endereco": "Rua Dom José Gaspar, 500",
-      "favorito": true,
+      "nome": "CREDEQ - Centro de Recuperação da Dependência Química",
+      "endereco": "R. Piauí, 220 - Santa Efigênia",
       "cidade": "Belo Horizonte",
       "latlong": [
-        -43.992911,
-        -19.923564
+        "-43.925102913039915",
+        "-19.923237835574344"
       ],
-      "url": "https://www.pucminas.br",
-      "cor": "green"
+      "url": "https://www.grupocasoto.com.br/",
+      "cor": "green",
+      "id": 1
+    },
+    {
+      "nome": "Fazenda Renascer Trat Dependentes Químicos",
+      "endereco": "R. Além Paraíba, 208 - Lagoinha",
+      "cidade": "Belo Horizonte",
+      "latlong": [
+        "-43.94382751870202",
+        "-19.91048507478543"
+      ],
+      "url": "https://www.fazendarenascer.com.br/",
+      "cor": "green",
+      "id": 2
+    },
+    {
+      "nome": "Clinica de Recuperação, Tratamento e Reabilitação de Dependentes Químicos",
+      "endereco": "R. Almandina, 142 - Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "latlong": [
+        "-43.92402299642882",
+        "-19.9182850820193"
+      ],
+      "url": "https://www.clinicarecuperacaoalcool.com.br/",
+      "cor": "green",
+      "id": 3
+    },
+    {
+      "nome": "Aquafisiobh - Centro de Reabilitação Especializada",
+      "endereco": "Rua Conde Ribeiro do Vale, 663 - Sagrada Família",
+      "cidade": "Belo Horizonte",
+      "latlong": [
+        "-43.9228083457261",
+        "-19.903176803442246"
+      ],
+      "url": "https://aquafisiobh.com.br/",
+      "cor": "green",
+      "id": 4
+    },
+    {
+      "nome": "Instituto Mãos Q Salvam",
+      "endereco": "R. José Gomes Ferreira, 1011 - Amazonas",
+      "cidade": "Betim",
+      "latlong": [
+        "-44.10487622631779",
+        "-19.948270215249238"
+      ],
+      "url": "https://institutomaosqsalvam.com.br/",
+      "cor": "green",
+      "id": 5
+    },
+    {
+      "nome": "Instituto Assistencial Espírita André Luiz",
+      "endereco": "R. Úrsula Paulino, 7 - Salgado Filho",
+      "cidade": "Belo Horizonte",
+      "latlong": [
+        "-43.98067883244114",
+        "-19.9503203754213"
+      ],
+      "url": "https://www.heal.org.br/",
+      "cor": "green",
+      "id": 6
     }
   ],
   "contadores": [
