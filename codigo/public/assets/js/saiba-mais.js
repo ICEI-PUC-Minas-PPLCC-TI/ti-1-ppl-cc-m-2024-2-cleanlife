@@ -1,13 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('search-input');
-    const searchResults = document.getElementById('search-results');
+    const warning = document.getElementById('search-results');
+    const searchResults = document.getElementById('artigos-container');
 
     async function performSearch() {
         const query = searchInput.value.trim().toLowerCase();
         searchResults.innerHTML = '';
+        warning.innerHTML = '';
 
         if (!query) {
-            searchResults.innerHTML = '<p>Por favor, insira um termo para busca.</p>';
+            warning.innerHTML = '<p>Por favor, insira um termo para busca.</p>';
+            carregarArtigos();
             return;
         }
 
@@ -20,15 +23,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            filteredArticles.forEach(article => {
-                const articleDiv = document.createElement('div');
-                articleDiv.classList.add('article');
-
-                articleDiv.innerHTML = `
-                            <a href="${article.link}" target="_blank"><h2 class="article-title">${article.titulo}</h2></a>
-                                    `;
-
-                searchResults.appendChild(articleDiv);
+            filteredArticles.forEach(artigo => {
+                const artigoDiv = document.createElement('div');
+                artigoDiv.className = 'artigo';
+          
+                const titulo = document.createElement('h2');
+                titulo.textContent = artigo.titulo;
+          
+                const link = document.createElement('a');
+                link.href = artigo.link;
+                link.target = '_blank';
+                link.textContent = 'Ler mais';
+          
+                artigoDiv.appendChild(titulo);
+                artigoDiv.appendChild(link);
+          
+                searchResults.appendChild(artigoDiv);
             });
         } catch (error) {
             console.error('Erro ao buscar os artigos:', error);

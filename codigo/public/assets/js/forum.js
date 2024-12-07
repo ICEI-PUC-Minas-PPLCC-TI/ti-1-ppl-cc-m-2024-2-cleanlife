@@ -2,6 +2,7 @@ const urlForuns = '/foruns';
 const urlComentarios = '/comentarios';
 let foruns = [];
 let comentarios = [];
+let isVazio;
 
 // Chama as funções de carregamento ao iniciar a página
 carregarForuns(() => {
@@ -188,29 +189,40 @@ function carregaDadosForum() {
     const comments = document.getElementById('comments');
     comments.innerHTML = ``;
 
-    comentariosDoForum.sort((a, b) => b.likes - a.likes);
+    if(comentariosDoForum.length > 0) {
+        comentariosDoForum.sort((a, b) => b.likes - a.likes);
+    
+        comentariosDoForum.forEach(comentario => {
+            if (comentario.comentario_pai_id == null) {
+                const usuarioJaCurtiu = comentario.usuariosQueCurtiram.includes(usuarioCorrente.id);
+                comments.innerHTML += `<div class="comment">
+                                            <div class="comment-content">
+                                                <strong style="font-size: 18px;">@${comentario.usuario.login}:</strong>
+                                                <p>${comentario.conteudo}</p>
+                                            </div>
+                                            <div class="comment-stats">
+                                                <a onclick="like(${comentario.id}, this)" style="margin: 3px;">
+                                                    <i class="${usuarioJaCurtiu ? 'ph-fill' : 'ph'} ph-arrow-fat-line-up up" style="font-size: 25px"></i>
+                                                </a>
+                                                <span class="like-count-${comentario.id}">${comentario.likes}</span>
+                                                <a onclick="comments(${comentario.id}, this)" style="margin: 15px; color: black; text-decoration: none;"><i class="ph ph-chats" style="font-size: 25px"></i></a>
+                                            </div>
+                                            <div id="comment-comments-${comentario.id}" class="comment-comments">
+    
+                                            </div>
+                                        </div>`;
+            }
+        });
+    } else {
+        isVazio = true;
+        comments.innerHTML += `<div class="comment">
+                                    <div class="comment-content">
+                                        <strong style="font-size: 25px;">Este fórum ainda está em branco!</strong>
+                                        <p style="font-size: 20px; margin-top: 10px;">Seja o primeiro a compartilhar sua experiência ou fazer uma pergunta. Sua contribuição pode ajudar outras pessoas que estão passando pelos mesmos desafios.</p>
+                                    </div>
+                                </div>`;
+    }
 
-    comentariosDoForum.forEach(comentario => {
-        if (comentario.comentario_pai_id == null) {
-            const usuarioJaCurtiu = comentario.usuariosQueCurtiram.includes(usuarioCorrente.id);
-            comments.innerHTML += `<div class="comment">
-                                        <div class="comment-content">
-                                            <strong style="font-size: 18px;">@${comentario.usuario.login}:</strong>
-                                            <p>${comentario.conteudo}</p>
-                                        </div>
-                                        <div class="comment-stats">
-                                            <a onclick="like(${comentario.id}, this)" style="margin: 3px;">
-                                                <i class="${usuarioJaCurtiu ? 'ph-fill' : 'ph'} ph-arrow-fat-line-up up" style="font-size: 25px"></i>
-                                            </a>
-                                            <span class="like-count-${comentario.id}">${comentario.likes}</span>
-                                            <a onclick="comments(${comentario.id}, this)" style="margin: 15px; color: black; text-decoration: none;"><i class="ph ph-chats" style="font-size: 25px"></i></a>
-                                        </div>
-                                        <div id="comment-comments-${comentario.id}" class="comment-comments">
-
-                                        </div>
-                                    </div>`;
-        }
-    });
 
     // Campo para adicionar novo comentário
     document.getElementById("novoComentario").addEventListener("submit", function (event) {
@@ -246,6 +258,10 @@ function carregaDadosForum() {
         .then(response => response.json())
         .then(data => {
             console.log("Comentário adicionado com sucesso:", data);
+            if(isVazio) {
+                comments.innerHTML = "";
+                isVazio = false;
+            }
             // Atualiza a lista de comentários na interface
             const usuarioJaCurtiu = novoComentario.usuariosQueCurtiram.includes(usuarioCorrente.id);
             comments.innerHTML += `<div class="comment">
@@ -346,7 +362,7 @@ function comments(comentarioPaiId, element) {
         // Criação dos comentários caso ainda não tenham sido criados
         if (!document.getElementById(`comments-${comentarioPaiId}`)) {
             comments.innerHTML += ` <div id="comments-${comentarioPaiId}" style="margin-bottom: 35px;">
-                                        <form id="novoComentarioComentario" class="mt-3">
+                                        <form id="novoComentarioComentario-${comentarioPaiId}" class="mt-3">
                                             <h5>Deixe sua resposta:</h5>
                                             <div class="form-group">
                                                 <textarea id="ComentarioComentarioInput" class="form-control" rows="1" placeholder="Escreva aqui..."></textarea>
@@ -376,7 +392,7 @@ function comments(comentarioPaiId, element) {
             });
         }
         // Campo para adicionar novo comentário
-        document.getElementById("novoComentarioComentario").addEventListener("submit", function (event) {
+        document.getElementById(`novoComentarioComentario-${comentarioPaiId}`).addEventListener("submit", function (event) {
             event.preventDefault(); // Impede o comportamento padrão de envio do formulário
 
             let comentarioInput = document.getElementById("ComentarioComentarioInput").value;
@@ -513,14 +529,14 @@ function reordenarComentarios(comentarioPaiId, forumId) {
     // Limpa os comentários atuais
     commentsContainer.innerHTML = '';
     commentsContainer.innerHTML += `<div id="comments-${comentarioPaiId}" style="margin-bottom: 35px;">
-                                        <form id="novoComentarioComentario1" class="mt-3">
+                                        <form id="novoComentarioComentario-${comentarioPaiId}" class="mt-3">
                                             <h5>Deixe sua resposta:</h5>
                                             <div class="form-group">
                                                 <textarea id="ComentarioComentarioInput" class="form-control" rows="1" placeholder="Escreva aqui..."></textarea>
                                             </div>
                                             <button type="submit" class="btn btn-primary">Enviar</button>
-                                            </form>
-                                            </div>`;
+                                        </form>
+                                    </div>`;
                                             
     // Adiciona os comentários reordenados no DOM
     comentariosDoPai.forEach(comentario => {
@@ -540,7 +556,7 @@ function reordenarComentarios(comentarioPaiId, forumId) {
     });
 
     // Campo para adicionar novo comentário
-    document.getElementById("novoComentarioComentario1").addEventListener("submit", function (event) {
+    document.getElementById(`novoComentarioComentario-${comentarioPaiId}`).addEventListener("submit", function (event) {
         event.preventDefault(); // Impede o comportamento padrão de envio do formulário
 
         let comentarioInput = document.getElementById("ComentarioComentarioInput").value;

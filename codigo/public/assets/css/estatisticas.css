@@ -1,16 +1,7 @@
 @import url(style.css);
 
-header {
-    margin-bottom: 20px;
-}
-
 h1, h3 {
     color: #333;
-}
-
-footer {
-    font-size: 0.9em;
-    margin-top: 20px;
 }
 
 canvas {

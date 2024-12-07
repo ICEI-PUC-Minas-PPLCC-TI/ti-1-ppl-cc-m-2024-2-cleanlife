@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleanLife</title>
+    <link rel="stylesheet" href="./assets/css/clinicas.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand" href="CleanLife.html">CleanLife</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"></li>
+                    <a class="nav-link" href="parceiros.html">Clinicas</a>
+                </li>
+                <li class="nav-item"></li>
+                    <a class="nav-link" href="artigos.html">Saiba Mais</a>
+                </li>
+            </ul>
+            <form class="form-inline ml-auto">
+                <a href="login.html" class="btn btn-primary mr-2">Login</a>
+            </form>
+        </div>
+    </nav>
+    
+    <div class="content">
+        <div class="container mt-4">
+            <h1>Clinicas</h1>
+            <p>Aqui você pode ver clinicas parceiras no mapa.</p>
+             <!-- DIV que receberá o mapa -->
+    <div id="map"></div>
+
+    <script>
+        // ----------------------------------------------
+        // Define o ponto central do mapa como a cidade de Belo Horizonte - MG
+        const centralLatLong= [-43.9397233,-19.9332786]
+
+        // ----------------------------------------------
+        // Variável global para o mapa
+        let map;
+
+        // ----------------------------------------------
+        // Carrega os dados das unidades da PUC Minas ao carregar a página 
+        window.onload = () => {
+            carregaDados();
+        }
+
+        // ----------------------------------------------
+        // Cria uma estrutura de dados com informações das unidades da PUC Minas 
+        function carregaDados () {
+            fetch ('/clinicas')
+                .then (response => response.json())
+                .then (data => {
+                    montarMapa (data);
+                })
+                .catch (error => {
+                    alert ('Erro ao obter dados do servidor:' + error.message);
+                })
+        }
+
+        // ----------------------------------------------
+        // Cria um mapa com a API do Mapbox para a div map e 
+        // adiciona marcadores para cada um dos locais obtidos via JSONServer
+        function montarMapa (dadosLocais) {
+            // ----------------------------------------------
+            // IMPORTANTE: Crie uma conta no Mapbox e obtenha uma accessToken, 
+            // em seguida, coloque na linha abaixo
+            // ----------------------------------------------
+            // mapboxgl.accessToken = 'COLOQUE_SUA_TOKEN_DO_MAPBOX_AQUI';
+            mapboxgl.accessToken = 'pk.eyJ1Ijoicm9tbWVsY2FybmVpcm8tcHVjIiwiYSI6ImNsb3ZuMTBoejBsd2gyamwzeDZzcWl5b3oifQ.VPWc3qoyon8Z_-URfKpvKg';
+            map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v12',
+                center: centralLatLong,
+                zoom: 9
+            });
+
+            // ----------------------------------------------
+            // Adiciona marcadores para os locais obtidos via JSONServer
+            dadosLocais.forEach ((clinica) => {
+                let popup = new mapboxgl.Popup({ offset: 25 })
+                    .setHTML(`<h3><a href="${clinica.url}" target="_blank">${clinica.nome}</a></h3><br>
+                              ${clinica.endereco} <br> ${clinica.cidade}`);
+                const marker = new mapboxgl.Marker({ color: clinica.cor })
+                    .setLngLat(clinica.latlong)
+                    .setPopup(popup)
+                    .addTo(map);     
+            }) 
+
+            // obtem a localização do usuário e adiciona um marcador no mapa
+            navigator.geolocation.getCurrentPosition (processarGetCurrentPosition, () => { alert ('Erro ao obter localização.') })
+        }
+
+        // ----------------------------------------------
+        // Adiciona um marcador com nossa posição no mapa
+        function processarGetCurrentPosition (local) {
+          let popup = new mapboxgl.Popup({ offset: 25 })
+              .setHTML(`<h3> Sua localização </h3>`);
+          const marker = new mapboxgl.Marker({ color: 'blue' })
+              .setLngLat([local.coords.longitude, local.coords.latitude])
+              .setPopup(popup)
+              .addTo(map);  
+        }
+
+    </script>
+        </div>
+    </div>
+
+    <footer class="text-center mt-4">
+        <p>&copy; 2024 CleanLife. Todos os direitos reservados.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

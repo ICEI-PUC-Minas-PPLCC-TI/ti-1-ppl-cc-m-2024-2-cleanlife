@@ -24,8 +24,8 @@ function carregaDados(){
         divForuns.innerHTML += `<a class="forum" href="forum.html?id=${forum.id}">
                                     <div>
                                         <h3>${forum.titulo}</h3>
-                                        <p>Descrição:${forum.descricao}</p>
-                                        <p>Objetivo:${forum.objetivo}</p>
+                                        <p>Descrição: ${forum.descricao}</p>
+                                        <p>Objetivo: ${forum.objetivo}</p>
                                     </div>
                                 </a>`;
     });
@@ -74,8 +74,8 @@ function carregaDados(){
             divForuns.innerHTML += `<a href="forum.html?id=${novoForum.id}">
                                         <div class="forum">
                                             <h3>${novoForum.titulo}</h3>
-                                            <p>Descrição:${novoForum.descricao}</p>
-                                            <p>Objetivo:${novoForum.objetivo}</p>
+                                            <p>Descrição: ${novoForum.descricao}</p>
+                                            <p>Objetivo: ${novoForum.objetivo}</p>
                                         </div>
                                     </a>`;
             // Limpar o formulário
@@ -89,3 +89,42 @@ function carregaDados(){
         });
     }); 
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('foruns');
+
+    async function performSearch() {
+        const query = searchInput.value.trim().toLowerCase();
+        searchResults.innerHTML = '';
+
+        if (!query) {
+            carregaDados();
+            return;
+        }
+
+        try {
+            const response = await fetch(`http://localhost:3000/foruns?q=${query}`);
+            const filteredArticles = await response.json();
+
+            if (filteredArticles.length === 0) {
+                return;
+            }
+            filteredArticles.forEach(forum => {
+                searchResults.innerHTML += `<a class="forum" href="forum.html?id=${forum.id}">
+                                    <div>
+                                        <h3>${forum.titulo}</h3>
+                                        <p>Descrição: ${forum.descricao}</p>
+                                        <p>Objetivo: ${forum.objetivo}</p>
+                                    </div>
+                                </a>`;
+            });
+        } catch (error) {
+            console.error('Erro ao buscar os artigos:', error);
+            searchResults.innerHTML = '<p>Erro ao buscar os artigos. Tente novamente mais tarde.</p>';
+        }
+    }
+
+    // Adicionar o evento de digitação
+    searchInput.addEventListener('input', performSearch);
+});

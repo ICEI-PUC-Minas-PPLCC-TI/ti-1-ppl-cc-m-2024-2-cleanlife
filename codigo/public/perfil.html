@@ -27,10 +27,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="perfil.html">Perfil</a>
                     </li>
-                    <li class="nav-item"></li>
+                    <li class="nav-item">
                         <a class="nav-link" href="clinicas.html">Clinicas</a>
                     </li>
-                    <li class="nav-item"></li>
+                    <li class="nav-item">
                         <a class="nav-link" href="saiba-mais.html">Saiba Mais</a>
                     </li>
                 </ul>
@@ -47,6 +47,7 @@
     </header>
     <div class="content">
         <div class="container mt-4">
+            <h1>Perfil</h1>
             <main>
                 <section class="profile">
                     <h2>NOME DE USUÁRIO:</h2>
@@ -57,11 +58,44 @@
                     <div id="foruns" class="forums">
                         
                     </div>
-                    <button  onclick="redirecionar()" class="edit-profile">EDITAR PERFIL</button>
+                    <button onclick="openEditModal()" class="edit-profile">EDITAR PERFIL</button>
                 </section>
             </main>
         </div>
     </div>
+
+    <!-- Modal para edição de perfil -->
+    <div id="editProfileModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Editar Perfil</h2>
+            <form id="editar">
+                <div class="form-group">
+                    <label for="username">Nome de Usuário</label>
+                    <input type="text" class="form-control" id="username" placeholder="Digite seu nome de usuário">
+                </div>
+                <div class="form-group">
+                    <label for="bio">Biografia</label>
+                    <textarea class="form-control" id="bio" rows="3" placeholder="Fale um pouco sobre você"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Digite seu email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha Atual (*)</label>
+                    <input type="password" class="form-control" id="password" placeholder="Digite sua senha atual">
+                </div>
+                <div class="form-group">
+                    <label for="new-password">Nova Senha (Opcional)</label>
+                    <input type="password" class="form-control" id="new-password" placeholder="Digite sua nova senha">
+                </div>
+                <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                <button type="button" class="btn btn-secondary" onclick="closeEditModal()">Cancelar</button>
+            </form>
+        </div>
+    </div>
+
     <footer class="text-center mt-4">
         <p>&copy; 2024 CleanLife. Todos os direitos reservados.</p>
     </footer>
