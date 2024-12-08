@@ -34,7 +34,7 @@ h1 {
 }
 
 .artigo a {
-  color: #6200ea;
+  color: #0056b3;
   text-decoration: none;
   font-weight: bold;
   display: inline-block;
@@ -138,10 +138,10 @@ nav ul li a {
 
 .article a {
   text-decoration: none !important;
-  color: #6200ea !important;
+  color: #0056b3 !important;
 }
 
 .article a:hover {
   text-decoration: underline !important;
-  color: #0056b3 !important;
+  color: #6200ea !important;
 }
